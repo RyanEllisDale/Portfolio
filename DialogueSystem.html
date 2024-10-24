@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- Header -->
+<head>
+    <!-- Meta Information -->
+    <meta name = "author" content= "Ryan Ellis Dale" />
+    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
+    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
+    
+    <meta charset = "utf-8" />
+    <metal http-equiv="refresh" content= "30" />
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
+    
+    <!-- Page Information -->
+    <title>Dialogue System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="java.js"></script>
+</head>
+    
+<!-- Body -->
+<body>
+    
+    <header class="FlexRow">
+        <a href="main.html">
+            <h1 id="RED">R.E.D</h1>
+        </a>
+        <div class="FlexRow HeaderIconTrack">
+            
+            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
+            </a>
+            
+            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
+            </a>    
+                
+            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
+                <img src="Assets/icons8-file.svg"/>
+            </a>
+        </div>
+    </header>
+    
+    <section class="AboutProject">
+        
+        <a href="main.html">
+            <img id="BackArrow" src="Assets/BackArrow.png" />
+        </a>
+        
+        <!-- Details: -->
+        <h1>Dialogue System</h1>
+        
+        <ul>
+            <li class="Tag">Visual Studio</li>
+            <li class="Tag">C++</li>
+            <li class="Tag">University</li>
+        </ul>
+        
+        <div class="SnapShotsWrapper">
+            <span>Snap Shots:</span>
+            <div>
+                <div class="SnapShot" id="DialogueSystemShot1"></div>
+                <div class="SnapShot" id="DialogueSystemShot2"></div>
+                <div class="SnapShot" id="DialogueSystemShot3"></div>
+            </div>
+        </div>
+        
+        <div class="Line MarginHorizontalCenter"></div>
+        
+    </section>
+    
+    <section class="SectionHeader">
+        <h1>About:</h1>
+        <p>Project Details</p>
+    </section>
+    
+    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
+        
+        <span>Nine-Slice Box:</span>
+        <p>Before creating the dialogue box, I needed a good way to handle the frame. To do this, I made a nine-sliced box class using the SFML C++ Library, which allows for a flexible and reusable frame. The nine-sliced box has two modes: 'stretch' and 'tiled.' In stretch mode, the segments of the sprite are resized to fit the box, while in tiled mode, the segments repeat to cover the entire area. You can see examples of both modes in the snapshots above.</p>
+        
+        <div class="Line"></div>
+        
+        <span>Dialogue:</span>
+        <p>After creating the nine-sliced box, I used it to build the frame for the dialogue box, which allowed me to start developing the dialogue system. This system has three designs: description, sub-character, and character. The character design includes a portrait and the character's name, while the sub-character design only includes the name. The description design features just the dialogue itself. I worked on this project to get more comfortable with SFML and C++. After finishing the dialogue system, I felt ready to move on to the Retro Adventure Engine.</p>
+        
+    </div>        
+        
+    <section class="SectionHeader">
+        <h1>Highlights:</h1>
+        <p>A little about the creation of this project</p>
+    </section>
+    
+    <section class="History FlexColumn">
+        
+        <div class="HistoryFlex">
+            <video controls loop autoplay>
+                <source src="Assets/DialogueSystem/TextProgression.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Text Progression::</span>
+                <p>The final challenge was implementing the ability to progress through the text and close the text box. Initially, I set it up so that the dialogue update function would run every frame, checking if the spacebar was pressed to skip to the next piece of dialogue. However, this approach didn't work well, as the project ran at 4000 frames per second, causing it to skip through all the dialogue too quickly when the user pressed the spacebar. I resolved this issue by adding a sleep mechanism to slow down the text box. I learnt a lot about inputs and timing thanks to this, as well as a bit about the main loop.<br><br>If I were to attempt this again in the future, I would like to find a more elegant solution for slowing down the dialogue, perhaps by implementing a system that checks if a certain amount of delta time has passed between spacebar presses. Additionally, I would like to enable users to navigate back through the dialogue, rather than just moving forward.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <div class="FlexColumn">
+                <div class="SnapShot" id="Dialogue1"></div>
+                <div class="SnapShot" id="Dialogue2"></div>
+            </div>
+            <div class="FlexColumn">
+                <span>Dialogue Box:</span>
+                <p>Initially, the dialogue box was challenging because I wanted a single draw function that could render the system differently based on its display mode. This project helped me learn more about that level of polymorphism. I’m very pleased with the final designs, especially since I was able to incorporate a custom font.<br><br>If I were to redo this system in the future for more of a challenge, I would like to implement a typewriter-style effect instead of having the text appear all at once. Additionally, I would like to experiment with changing the properties of specific characters or words in the dialogue, such as highlighting a word in red, potentially using a tagging system.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <div class="FlexColumn">
+                <div class="SnapShot" id="NineSlice1"></div>
+                <div class="SnapShot" id="NineSlice2"></div>
+            </div>
+            <div class="FlexColumn">
+                <div class="SnapShot" id="NineSlice3"></div>
+                <div class="SnapShot" id="NineSlice4"></div>
+            </div>
+            <div class="FlexColumn">
+                <span>Nine-Slice Box:</span>
+                <p>During this project, I learned how to effectively position, size, and render sprites. Given the potential number of sprites that the tiled mode could draw, it was crucial to optimize the nine-sliced box. I also gained a better understanding of C++ pointers, as the dialogue class uses a pointer to the nine-sliced box for its frame.<br><br>If I were to revisit this project in the future, I would add more functionality to the NineSliceBox, such as the ability to switch between the two display modes. Currently, the nine-sliced box can only be created and drawn, so enhancing its capabilities would make it more versatile.</p>
+            </div>
+        </div>
+    
+    </section>    
+    
+    <div class="Line"></div>
+    
+    <section class="SectionHeader">
+        <a href="https://github.com/RyanEllisDale/Dialogue-System.git" target="_blank">
+            <button>Visit Project</button>
+        </a>
+    </section>
+     <footer class="FlexColumn">
+        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
+        <span></span>
+    </footer>
+    
+</body>    
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- Header -->
+<head>
+    <!-- Meta Information -->
+    <meta name = "author" content= "Ryan Ellis Dale" />
+    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
+    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
+    
+    <meta charset = "utf-8" />
+    <metal http-equiv="refresh" content= "30" />
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
+    
+    <!-- Page Information -->
+    <title>Retro Adventure Engine</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="java.js"></script>
+</head>
+    
+<!-- Body -->
+<body>
+    
+    <header class="FlexRow">
+        <a href="main.html">
+            <h1 id="RED">R.E.D</h1>
+        </a>
+        <div class="FlexRow HeaderIconTrack">
+            
+            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
+            </a>
+            
+            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
+            </a>    
+                
+            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
+                <img src="Assets/icons8-file.svg"/>
+            </a>
+        </div>
+    </header>
+    
+    <section class="AboutProject">
+        
+        <a href="main.html">
+            <img id="BackArrow" src="Assets/BackArrow.png" />
+        </a>
+        
+        <!-- Details: -->
+        <h1>Retro Adventure Engine</h1>
+        
+        <ul>
+            <li class="Tag">Visual Studio</li>
+            <li class="Tag">C++</li>
+            <li class="Tag">University</li>
+            <li class="Tag">Technical</li>
+        </ul>
+        
+        <div class="SnapShotsWrapper">
+            <span>Snap Shots:</span>
+            <div>
+                <div class="SnapShot" id="RAEngineShot1"></div>
+                <div class="SnapShot" id="RAEngineShot2"></div>
+                <div class="SnapShot" id="RAEngineShot3"></div>
+            </div>
+        </div>
+        
+        <div class="Line MarginHorizontalCenter"></div>
+        
+    </section>
+    
+    <section class="SectionHeader">
+        <p>To see more completed projects please go back to the home page and scroll to the projects section. The Retro Adventure Engine is still early in development and I am eager to keep improving upon it!</p>
+    </section>
+    <section class="SectionHeader">
+        <h1>About:</h1>
+        <p>Project Details</p>
+    </section>
+    
+    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
+        
+       <p>The Retro Adventure Engine is a simple 2D engine designed to help create Retro-esc Top-Down RPGS, good examples of these types of games being Zelda and Pokemon. The system is programmed in the C++ Language using two libraries, SFML and ImGUI. As of current the System supports rendering sprites from a spritesheet, the creation of character game entities and movement.</p>
+        
+        <div class="Line"></div>
+        
+        <span>Targets:</span>
+        
+        <div class="Targets FlexColumn">
+            <span>| Retro</span>
+            <p>The main appeal of the engine will be its retro theme-ing as such limiations will be forced upon users as part of the engines asthetic and design, an example of this will be sprite size capping at 64x64 and a limited colour depth, with a potential lack of transparency allowed (pngs), instead a alpha colour being chosen by the user. Furthermore, the audio will be compressed to fit the technology of the time.</p>
+        </div>
+        
+        <div class="Targets FlexColumn">
+            <span>| LightWeight</span>
+            <p>The size and scope of the engine is being carefully considered throughout all new editions to be as resource-effecient. An example of this would be the use of C++'s built in short data type having mostly replaced integers in the engine.</p>
+        </div>
+        
+        <div class="Targets FlexColumn">
+            <span>| User-Friendly</span>
+            <p>The engine should be easy to expand upon for the benefit of the users attempting to create a project from the engine. Thusly the core concepts of the engine are being kept simple with classes being made to be as concise as possible. The engine should also be generous to its users in that it should give them detailed error messages when an error occurs and  effective error handling will be built in. In addition to this, serious consideration is being given to the structured doccumentation that will accompany the engine.</p>
+        </div>
+        
+        <div class="Targets FlexColumn">
+            <span>| Effecient</span>
+            <p>The core underlying code that the user works from should be optimised, clean and quick. </p>
+        </div>
+        
+    </div>        
+        
+    <section class="SectionHeader">
+        <h1>Highlights:</h1>
+        <p>A little about the creation of this project</p>
+    </section>
+    
+    <section class="History FlexColumn">
+        
+        <div class="HistoryFlex">
+            <video controls loop autoplay>
+                <source src="Assets/RAEngine/Movement.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Movement:</span>
+                <p>After Successfully building the graphics system and creating animation sprite functionality I moved on to implimenting it into an actual mechanic. I chose Movement as it was simple and would let me Test the system freely.<br><br>I learnt how to use keyboard and mouse inputs within C++ From this project, learning input handling will be essential for keymapping later in the project.<br><br>In Later Editions, I hope to create my own vector class that is smaller and more lightweight than the one provided in SFML, I would like to do this to have a more tailored vector class to use for movement.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <video controls loop autoplay>
+                <source src="Assets/RAEngine/AnimationSelection.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Animation Selection:</span>
+                <p>After getting graphics to render on the screen the next step was to get an animation playing. I added animation functionality to my now black-boxed graphics class and now game entities can swap their animations / sprite-sheet texture corrdinates when needed.<br><br>I learnt how to create animations for this by moving the partian of the current sprite to the next frame of the animation in the spritesheet. Whilst its not the only way to do animation it is one of the simplist and most effective.<br><br>In later editions I hope to find a way to optimise my use of spritesheets as to save on expensive functions that SFML has to call when loading a new image as a sprite.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <div class="SnapShot" id="RAEngineShot1"></div>
+            <div class="SnapShot" id="RAEngineShot2"></div>
+            <div class="SnapShot" id="RAEngineShot3"></div>
+            <div class="FlexColumn">
+                <span>Rendering:</span>
+                <p>At the beginning of the project, I determined that establishing a graphics system would be the most logical first step, allowing me to visualize elements on the screen as I developed the Retro Adventure Engine.<br><br>Through this process, I learned to create a singleton class in C++, which has proven to be highly beneficial. My graphics class is straightforward and user-friendly, offering a wide range of drawing functions with varying parameters to accommodate different use cases. Additionally, I gained experience in error handling related to texture loading.<br><br>The current iteration of the graphics system is lightweight and effective. In future versions of the engine, I aim to implement a feature that allows for the selection of an alpha color, enabling the program to render all pixels of that color as transparent.</p>
+            </div>
+        </div>
+    
+    </section>    
+    
+    <div class="Line"></div>
+    
+    <section class="SectionHeader">
+        <a href="https://github.com/RyanEllisDale/Retro-Adventure-Engine.git" target="_blank">
+            <button>Visit Project</button>
+        </a>
+    </section>
+     <footer class="FlexColumn">
+        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
+        <span></span>
+    </footer>
+    
+</body>    
+</html>

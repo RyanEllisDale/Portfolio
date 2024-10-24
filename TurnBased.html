@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- Header -->
+<head>
+    <!-- Meta Information -->
+    <meta name = "author" content= "Ryan Ellis Dale" />
+    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
+    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
+    
+    <meta charset = "utf-8" />
+    <metal http-equiv="refresh" content= "30" />
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
+    
+    <!-- Page Information -->
+    <title>Turn Based System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="java.js"></script>
+</head>
+    
+<!-- Body -->
+<body>
+    
+    <header class="FlexRow">
+        <a href="main.html">
+            <h1 id="RED">R.E.D</h1>
+        </a>
+        <div class="FlexRow HeaderIconTrack">
+            
+            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
+            </a>
+            
+            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
+            </a>    
+                
+            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
+                <img src="Assets/icons8-file.svg"/>
+            </a>
+        </div>
+    </header>
+    
+    <section class="AboutProject">
+        
+        <a href="main.html">
+            <img id="BackArrow" src="Assets/BackArrow.png" />
+        </a>
+        
+        <!-- Details: -->
+        <h1>Turn Based System</h1>
+        
+        <ul>
+            <li class="Tag">UE5</li>
+            <li class="Tag">Blueprints</li>
+            <li class="Tag">University</li>
+        </ul>
+        
+        <div class="SnapShotsWrapper">
+            <span>Snap Shots:</span>
+            <div>
+                <div class="SnapShot" id="TurnBasedShot1"></div>
+                <div class="SnapShot" id="TurnBasedShot2"></div>
+                <div class="SnapShot" id="TurnBasedShot3"></div>
+            </div>
+        </div>
+        
+        <div class="Line MarginHorizontalCenter"></div>
+        
+    </section>
+    
+    <section class="SectionHeader">
+        <h1>About:</h1>
+        <p>Project Details</p>
+    </section>
+    
+    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
+        
+        <p>Building on my experience from the third-person project, this university assignment allowed me to deepen my skills in several key areas. I learned how to take control of the main camera actor, create collectibles along with a pseudo-inventory system, and establish a turn order for defined actors—each of which is a child of the "TurnActor." Additionally, I gained experience in managing dynamic materials within the project.</p>
+                
+    </div>        
+        
+    <section class="SectionHeader">
+        <h1>Highlights:</h1>
+        <p>A little about the creation of this project</p>
+    </section>
+    
+    <section class="History FlexColumn">
+        
+        <div class="HistoryFlex">
+            <video controls loop>
+                <source src="Assets/TurnBased/TurnOrder.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Turn Order:</span>
+                <p>I developed a turn order manager system that determines when actors are allowed to execute their update and step events. Each actor is assigned an index within this manager, and after an actor completes its turn, the index advances to the next actor. This process continues in a loop, returning to the first actor once all have had their turn.<br><br>The turn order manager specifically targets the TurnActor Blueprint Class and all its children, allowing for any object to be made a child of this class to participate in the turn system. Using this logic, I was able to design moving walls, cover, and interactable obstacles that take their turn only when activated.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <video controls loop muted>
+                <source src="Assets/TurnBased/Camera.mp4"type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Camera:</span>
+                <p>Given the prototype's top-down perspective and the fact that all turn actors receive a turn regardless of their position in the scene, I deemed it needed to create a versatile camera system for the prototype.<br><br>The camera can switch between being locked to a target and manual control using the Tab key. Additionally, it can be instantly positioned to follow the next actor in the turn order by pressing the Alt key. The camera also supports zooming in and out using the scroll wheel, with the zoom level clamped for consistency. Furthermore, it features a subtle built-in screen shake effect to enhance the visual experience.</p>
+            </div>
+        </div>
+    
+    <div class="Line"></div>
+    
+    <section class="SectionHeader">
+        <a href="https://drive.google.com/file/d/15L6kkzfngVKf-y6Ad0SRkqvKqEH8tVTP/view?usp=sharing" target="_blank">
+            <button>Visit Project</button>
+        </a>
+    </section>
+    
+     <footer class="FlexColumn">
+        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
+        <span></span>
+    </footer>
+    
+</body>    
+</html>

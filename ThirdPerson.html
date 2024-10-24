@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- Header -->
+<head>
+    <!-- Meta Information -->
+    <meta name = "author" content= "Ryan Ellis Dale" />
+    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
+    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
+    
+    <meta charset = "utf-8" />
+    <metal http-equiv="refresh" content= "30" />
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
+    
+    <!-- Page Information -->
+    <title>Third Person Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="java.js"></script>
+</head>
+    
+<!-- Body -->
+<body>
+    
+    <header class="FlexRow">
+        <a href="main.html">
+            <h1 id="RED">R.E.D</h1>
+        </a>
+        <div class="FlexRow HeaderIconTrack">
+            
+            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
+            </a>
+            
+            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
+                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
+            </a>    
+                
+            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
+                <img src="Assets/icons8-file.svg"/>
+            </a>
+        </div>
+    </header>
+    
+    <section class="AboutProject">
+        
+        <a href="main.html">
+            <img id="BackArrow" src="Assets/BackArrow.png" />
+        </a>
+        
+        <!-- Details: -->
+        <h1>Third Person Adventure</h1>
+        
+        <ul>
+            <li class="Tag">UE5</li>
+            <li class="Tag">Blueprints</li>
+            <li class="Tag">University</li>
+        </ul>
+        
+        <div class="SnapShotsWrapper">
+            <span>Snap Shots:</span>
+            <div>
+                <div class="SnapShot" id="ThirdPersonShot1"></div>
+                <div class="SnapShot" id="ThirdPersonShot2"></div>
+                <div class="SnapShot" id="ThirdPersonShot3"></div>
+            </div>
+        </div>
+        
+        <div class="Line MarginHorizontalCenter"></div>
+        
+    </section>
+    
+    <section class="SectionHeader">
+        <h1>About:</h1>
+        <p>Project Details</p>
+    </section>
+    
+    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
+        
+        <p>This third-person adventure game marked my first foray into Unreal Engine 5 and Blueprint scripting, It was an assigned project during the first year of my university course. During the development process, I experimented with rigid body dynamics, applying forces to objects, and creating various interactive Blueprint actors. The project consists of five levels, four of which feature the player controlling a robot from a third-person perspective.</p>
+                
+    </div>        
+        
+    <section class="SectionHeader">
+        <h1>Highlights:</h1>
+        <p>A little about the creation of this project</p>
+    </section>
+    
+    <section class="History FlexColumn">
+        
+        <div class="HistoryFlex">
+            <video controls loop>
+                <source src="Assets/ThirdPerson/CharacerInteraction.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Actor Interaction:</span>
+                <p>Through my work with Blueprints, I learned how to reference and cast actors effectively. I then developed a simple dialogue system that manages both inputs and text parameters.<br><br>A key focus of this project was actor interaction. The player can perform various actions, including picking up keys, activating switches, opening locked doors, interacting with NPCs, and colliding with hazards, among other functionalities.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <video controls loop muted>
+                <source src="Assets/ThirdPerson/FiniteStateMachine.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Finite State Machine:</span>
+                <p>I developed a sentry enemy that utilizes a finite state machine system with three distinct states: idle, off, and locked on. In the idle state, the sentry scans the area for the player. Upon detecting the player, it transitions to the locked-on state, where it tracks the player and fires until they are out of range. Additionally, this enemy can be disabled by interacting with another actor in the room, causing it to power down and cease all actions.</p>
+            </div>
+        </div>
+        
+        <div class="HistoryFlex">
+            <video controls loop>
+                <source src="Assets/ThirdPerson/Physics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="FlexColumn">
+                <span>Physics:</span>
+                <p>While learning the basics, I experimented with movement and physics systems in Unreal Engine using cubes. Additionally, I became familiar with the material and material instance systems by assigning each cube a unique identifier.</p>
+            </div>
+        </div>
+    
+    </section>    
+    
+    
+    <div class="Line"></div>
+    
+    <section class="SectionHeader">
+        <h1>Known Issues:</h1>
+        <p>| The Camera Can have a hard time when pressed up against a wall</p>
+    </section>
+    
+    <section class="SectionHeader">
+        <a href="https://github.com/RyanEllisDale/Prototype-Third-Person-UE5.git" target="_blank">
+            <button>Visit Project</button>
+        </a>
+    </section>
+    
+     <footer class="FlexColumn">
+        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
+        <span></span>
+    </footer>
+    
+</body>    
+</html>

@@ -1,0 +1,1098 @@
+/* Full Page Constants : */
+/* Universal */
+*
+{    
+    /* Position */
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box; 
+    
+    /* Design */
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Full Body */
+body 
+{
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    /* Vars */
+    /* Colours: */
+    --SurfaceColor: #121212;
+    --PrimaryTint: #cfcbcb;
+    --AccentSurface: #222121;
+    color: var(--PrimaryTint);
+    
+    --CollageSize: 200px;
+    --CollageImageAmount: 6;
+    --PurpleAccentColour: rgb(255, 19, 120);
+    
+    /* Margins */
+    --ScreenMargin: 10px;
+    --FlexItemGap : 5px;
+    
+    /* Design */
+    background-color: var(--SurfaceColor);
+}
+
+a
+{
+    /* Dimensions */
+    width: fit-content;
+    height: fit-content;
+    
+    /* Design */
+    color: var(--PrimaryTint);
+}
+
+h1
+{
+    font-size: 36px;
+}
+
+span
+{
+    font-size: 24px;
+}
+
+.Main
+{
+    /* Position */
+    margin-top: 50px;
+}
+
+/* General Design Classes */
+.FlexRow
+{
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    
+    /* Position */
+    gap: var(--FlexItemGap);
+}
+
+.FlexColumn
+{
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    
+    /* Position */
+    gap: var(--FlexItemGap);
+}
+
+.MarginHorizontalCenter
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MarginVerticalCenter
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Section Designs: */
+.SectionHeader
+{
+    /* Display */
+    justify-content: center;
+    align-items: center;
+    
+    /* Dimension */
+    width: 100%;
+    height: fit-content;
+    
+    /* Position */
+    gap: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+    /* Design */
+    background-color: var(--AccentSurface);
+    text-align: center;
+}
+
+/* Index Specific: */
+#GradientBackground
+{
+    /* Dimension */
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    
+    /* Design */
+    background-image: url(Assets/BlackGradient.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Summary
+{   
+    /* Position */
+    margin-top: calc((100vh/2) - var(--CollageSize) - var(--ScreenMargin)); /* Centers Div */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Design */
+    text-align: center;
+}
+
+/* Collage */
+.Collage
+{    
+    /* Dimension */
+    width: 90%;
+    max-width: 1536px;
+    height: var(--CollageSize);
+    
+    /* Position */
+    margin-inline: auto;
+    margin-top: var(--ScreenMargin);
+    position: relative;
+    
+    /* Design */
+    overflow: hidden;
+    mask-image: linear-gradient(to right, 
+    rgba(0,0,0,0),
+    rgba(0,0,0,1) 20%,
+    rgba(0,0,0,1) 80%,
+    rgba(0,0,0,0));
+}
+
+.CollageItem
+{
+    /* Dimensions */
+    width: var(--CollageSize);
+    height: var(--CollageSize);
+    
+    /* Position */
+    position: absolute;
+    left: max(calc(var(--CollageSize) * var(--CollageImageAmount)),100%);
+    
+    /* Design */
+    border-style: solid;
+    border-color: var(--PrimaryTint);
+    border-radius: 5px;    
+    
+    /* Animation */
+    animation-name: ScrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    /* Design */
+    background-size: cover;
+    background-position: center;
+}
+
+
+@keyframes ScrollLeft
+{
+    to
+    {
+        left: calc(var(--CollageSize) * -1);
+    }
+}
+
+/* Gec */
+#Item1
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 1) * -1);
+}
+
+/* Star Raiders */
+#Item2
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 2) * -1);
+}
+
+/* Turn Based */
+#Item3
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 3) * -1);
+}
+
+/* Robonslaught */
+#Item4
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 4) * -1);
+}
+
+/* Third Person */
+#Item5
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 5) * -1);
+}
+
+/* Dialogue System */
+#Item6
+{
+    animation-delay: calc(30s / var(--CollageImageAmount) * (var(--CollageImageAmount) - 6) * -1);
+}
+
+
+
+
+
+
+
+
+
+/* Main: */
+
+/* Header */
+
+header
+{
+    /* Dimensions */
+    width: 100%;
+    height: 50px;
+
+    /* Position */
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    
+    /* Design */
+    background-color: var(--SurfaceColor);
+    
+    border-bottom-color: var(--PrimaryTint);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+#RED
+{    
+    /* Position */
+    margin-left: var(--ScreenMargin);
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    /* Design */
+    font-size: 36px;
+}
+
+.HeaderIconTrack
+{
+    /* Position */
+    margin-right: var(--ScreenMargin);
+    margin-left: auto;
+    gap: var(--FlexItemGap);   
+}
+
+.HeaderIcon
+{
+    /* Dimensions */
+    height: 50px;
+    
+    /* Display */
+    display: inline-block;
+}
+
+.HeaderIcon img
+{
+    /* Dimension */
+    height: 50px;
+    width: 50px;
+}
+
+/* About Me */
+
+.About
+{
+    /* Dimension */
+    height: 500px;
+    
+    /* Position */
+    position: relative;
+    
+    /* Design */
+    background-image: url(Assets/BlackGradient.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.AboutProject
+{
+    /* Dimensions */
+    width: 100%;
+    height: 400px;
+    
+    /* Position */
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    
+    /* Design */
+    background-image: url(Assets/BlackGradient.jpg);
+    background-size: cover;
+    background-position: center;   
+}
+
+.Title,
+.Personal
+{
+    /* Position */
+    margin-left: var(--ScreenMargin);
+    margin-right: var(--ScreenMargin);
+}
+
+.Personal
+{
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    
+    /* Dimension */
+    
+    
+    /* Position */
+    margin-top: 20px;
+    align-items: center;
+    gap: var(--FlexItemGap);
+}
+
+.Personal p
+{
+    max-width: 500px;
+}
+
+/* Technical */
+
+.TechnicalExperience
+{
+    /* Dimension */
+    width: 80%;
+    
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    margin-left: var(--ScreenMargin);
+}
+
+/* Tags: */
+.TagWrapper
+{
+    /* Position */
+    margin-top: 5px;
+    margin-right: auto;
+    gap: var(--FlexItemGap);
+}
+
+
+
+button
+{
+    /* Position */
+    margin-top: 5px;
+    padding: 5px;
+    
+    /* Design */
+    background-color: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--PrimaryTint);
+    color: var(--PrimaryTint);
+    
+    /* Animation */
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+}
+
+button:hover
+{
+    /* Position */
+    padding: 8px 14px;
+    
+    /* Design */
+    font-size: 22px;
+    background-color: var(--PrimaryTint);
+    color: black;
+    border-color: black;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    
+}
+
+.Tag
+{
+    /* Display */
+    display: inline-block;
+    
+    /* Design */
+    background-color: var(--PrimaryTint);
+    color: black;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+/* Logos: */
+.Logo
+{
+    /* Dimensions */
+    width: 10vw;
+    max-width: 100px;
+
+    /* Display */
+    display: inline-block;
+    
+}
+
+.CV
+{
+    /* Display */
+    display: block;
+    
+    /* Position */
+    position: absolute;
+    
+    bottom: 0;
+    right: 0;
+    
+    margin-right: var(--ScreenMargin);
+    align-items: center;
+}
+
+/* Projects: */
+.Projects
+{
+    /* Position */
+    gap: 5px;
+    margin-bottom: 10px;
+    
+    /* Design */
+    text-align: center;
+}
+
+.ProjectCollage
+{
+    /* Dimensions */
+    max-width: 1200px;
+    
+    /* Position */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ProjectWrapper
+{
+    /* Dimensions */
+    height: 500px;
+    
+    /* Display */
+    display: inline-block;
+    
+    /* Position */
+    margin: 5px;
+    vertical-align: top;
+}
+
+.Project
+{
+    /* Dimension */
+    width: 340px;
+}
+
+.ProjectItem
+{
+    /* Dimensions */
+    height: 340px;
+}
+
+.Thumbnail
+{
+    /* Position */
+    position: relative;
+    z-index: 0;
+    
+    /* Design */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    /* Animation */
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+   
+}
+
+.Thumbnail:hover
+{
+    /* Design */
+    background-size: 110%;   
+}
+
+.Thumbnail span
+{
+    /* Dimensions */
+    width: 100%;
+    
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    
+    /* Design */
+    text-align: center;
+    background-color: rgba(34,33,33,0.8);
+}
+
+.RAEngine
+{
+    background-image: url(Assets/RAEngine/Thumbnail.jpg);
+}
+
+.StarRaiders
+{
+    /* Design */
+    background-image: url(Assets/StarRaiders/Thumbnail.JPG);
+}
+
+.TurnBased
+{
+    background-image: url(Assets/TurnBased/Thumbnail.jpg);
+}
+
+.ThirdPerson
+{
+    background-image: url(Assets/ThirdPerson/Thumbnail.jpg);
+}
+
+.DialogueSystem
+{
+    background-image: url(Assets/DialogueSystem/Thumbnail.jpg);
+}
+
+.Robonslaught
+{
+    background-image: url(Assets/Robonslaught/Thumbnail.JPG);
+}
+
+
+.Project p
+{
+    /* Dimension */
+    height: 120px;
+    
+    /* Position */
+    margin-top: 20px;
+}
+
+#CurrentProject
+{
+    /* Position */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    
+}
+
+.Details
+{
+    /* Dimension */
+    padding: 10px;
+        
+    /* Design */
+    background-color: var(--AccentSurface);
+    
+    /* Position */
+    justify-content: center;
+}
+
+.Details h1, 
+.Details p
+{
+    /* Design */
+    text-align: center;
+}
+
+
+/* Education */
+.EducationWrapper
+{
+    /* Position */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Education
+{
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    
+    /* Position */
+    gap: 10px;
+}
+
+.LocationSymbol
+{
+    /* Dimension */
+    width: 20px;
+    
+    /* Display */
+    display: inline-block;
+}
+
+.Line
+{
+    /* Dimension */
+    min-width: 240px;
+    width: 50%;
+    
+    /* Position */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    /* Design */
+    border-top-style: solid;
+    border-top-color: var(--PrimaryTint);
+    border-top-width: 2px;
+}
+
+.Contacts
+{
+    /* Position */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+footer
+{
+    /* Dimensions */
+    height: 40px;
+    
+    /* Position */
+    position: relative;
+    bottom: 0;
+    
+    /* Design */
+    background-color: var(--SurfaceColor);
+    text-align: center;
+}
+
+footer p
+{
+    /* Position */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color: var(--AccentSurface);
+}
+
+::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    
+    border-radius: 5px;
+    
+    background-color: var(--PrimaryTint);
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: white;
+}
+
+
+/* Media Differences */
+@media only screen and (max-width: 849px) 
+{
+    
+    /* Getting Rid of CV Download Past 850 px */
+    .CV 
+    {
+        /* Display */
+        display: none;
+    }
+    
+    /* Changing The layout of Education so it doesnt squish: */
+    .Education
+    {
+        /* Display */
+        flex-direction: column;
+        
+        /* Position */
+        /* gap: var(--FlexItemGap); */
+    }
+    
+}
+
+/* Media Differences */
+@media only screen and (max-width: 601px) 
+{
+    
+    /* Swapping Flex Direction For Personal,
+    So that text appears below Selfie */
+    .Personal
+    {
+        /* Display */
+        flex-direction: column;
+    }
+}
+
+.SnapShotsWrapper
+{
+    /* Display */
+    
+    /* Position */
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.SnapShot
+{
+    /* Dimensions */
+    width: 200px;
+    height: 200px;
+
+    /* Display */
+    display: inline-block;
+    
+    /* Design */
+    background-size: cover;
+    background-position: center;
+}
+
+#RAEngineShot1
+{
+    background-image: url(Assets/RAEngine/SingleRender.jpg);
+}
+
+#RAEngineShot2
+{
+    background-image: url(Assets/RAEngine/Thumbnail.jpg);
+}
+
+#RAEngineShot3
+{
+    background-image: url(Assets/RAEngine/10.jpg);
+}
+
+#RAEngineRenderingShot
+{
+    background-image: url(Assets/RAEngine/SingleRender.jpg);
+}
+
+#DialogueSystemShot1
+{
+    background-image: url(Assets/DialogueSystem/TileMode3.jpg);
+}
+
+
+#DialogueSystemShot2
+{
+    background-image: url(Assets/DialogueSystem/Thumbnail.jpg);
+}
+
+
+#DialogueSystemShot3
+{
+    background-image: url(Assets/DialogueSystem/StretchMode3.jpg);
+}
+
+#NineSlice1
+{
+    background-image: url(Assets/DialogueSystem/StretchMode2.jpg);
+}
+
+#NineSlice2
+{
+    background-image: url(Assets/DialogueSystem/StretchMode3.jpg);
+}
+
+#NineSlice3
+{
+    background-image: url(Assets/DialogueSystem/TileMode2.jpg);
+}
+
+#NineSlice4
+{
+    background-image: url(Assets/DialogueSystem/TileMode3.jpg);
+}
+
+#Dialogue1
+{
+    width: 33vw;
+    max-width: 500px;
+    min-width: 340px;
+    background-repeat: no-repeat;
+    background-image: url(Assets/DialogueSystem/Dialogue%20One.jpg);
+}
+
+#Dialogue2
+{
+    width: 33vw;
+    max-width: 500px;
+    min-width: 340px;
+    background-repeat: no-repeat;
+    background-image: url(Assets/DialogueSystem/Dialogue3.jpg);
+}
+
+#StarRaidersShot1
+{
+    background-image: url(Assets/StarRaiders/Level1Snippet.JPG);
+}
+
+#StarRaidersShot2
+{
+    background-image: url(Assets/StarRaiders/Thumbnail.JPG);
+}
+
+#StarRaidersShot3
+{
+    background-image: url(Assets/StarRaiders/Level2Snippet.JPG);
+}
+
+#RobonslaughtShot1
+{
+    background-image: url(Assets/Robonslaught/Attacker.JPG);
+}
+
+#RobonslaughtShot2
+{
+    background-image: url(Assets/Robonslaught/Thumbnail.JPG);
+}
+
+#RobonslaughtShot3
+{
+    background-image: url(Assets/Robonslaught/Defender.JPG);
+}
+
+#ThirdPersonShot1
+{
+    background-image: url(Assets/ThirdPerson/Cubes.jpg);
+}
+
+#ThirdPersonShot2
+{
+    background-image: url(Assets/ThirdPerson/Thumbnail.jpg);
+}
+
+#ThirdPersonShot3
+{
+    background-image: url(Assets/ThirdPerson/SentryStatic.jpg);
+}
+
+#TurnBasedShot1
+{
+    background-image: url(Assets/TurnBased/Collecables.jpg);
+}
+
+#TurnBasedShot2
+{
+    background-image: url(Assets/TurnBased/Thumbnail.jpg);
+}
+
+#TurnBasedShot3
+{
+    background-image: url(Assets/TurnBased/ActorInteraction.jpg);
+}
+
+
+#BackArrow
+{
+    /* Dimensions */
+    width: 50px;
+    height: 50px;
+    
+    /* Position */
+    position: absolute;
+    left: 0;
+    margin-left: var(--ScreenMargin);
+    margin-top: var(--ScreenMargin);
+}
+
+
+/* Project Details */
+.DetailsWrapper
+{
+    /* Dimension */
+    max-width: 800px;
+
+    /* Position */
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 5px;
+    align-items: center;
+}
+
+.DetailsWrapper p
+{
+    margin-left: var(--ScreenMargin);
+    margin-right: var(--ScreenMargin);
+}
+
+.Targets
+{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.DetailItem
+{
+    /* Dimensions */
+    width: 200px;
+    
+    /* Position */
+    padding: 5px 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    
+    /* Design */
+    background-color: var(--AccentSurface);
+    border-radius: 5px;
+}
+
+.History
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.HistoryFlex
+{
+    width: 90%;
+    max-width: 1200px;
+    
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    text-align: left;
+    
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.HistoryFlex p
+{
+    max-width: 520px;
+}
+
+.HistoryFlex video
+{
+    
+    z-index: 0;
+    min-width: 340px;
+    width: 70vw;
+    max-width: 680px;
+    
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: var(--PrimaryTint);
+}
+
+/* Media Differences */
+@media only screen and (max-width: 620px) 
+{
+    .AboutProject
+    {
+        height: 600px;
+    }
+    
+    .DetailsWrapper
+    {
+        flex-direction: column;
+    }
+    
+    .DetailItem
+    {
+        width: 250px;
+    }
+}
+
+/* Media Differences */
+@media only screen and (max-width: 420px) 
+{
+    
+    .AboutProject
+    {
+        height: 850px;
+    }
+    
+    #BackArrow
+    {
+        /* Display */
+        display: none;
+    }
+    
+}
+
+
+/* Media Differences */
+@media only screen and (max-width: 1050px) 
+{
+    
+    .HistoryFlex
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+/* Media Differences */
+@media only screen and (max-width: 1420px) 
+{
+    
+    #Dialogue1
+    {
+        background-size: 90%;
+    }
+
+    #Dialogue2
+    {
+        background-size: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
