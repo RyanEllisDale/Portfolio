@@ -1,52 +1,781 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
-<!-- Header -->
+<!-- Head -->
+
 <head>
-    <!-- Meta Information -->
-    <meta name = "author" content= "Ryan Ellis Dale" />
-    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
-    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
-    
-    <meta charset = "utf-8" />
-    <metal http-equiv="refresh" content= "30" />
-    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
-    
-    <!-- Page Information -->
-    <title>Ryan-Ellis Dale Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="java.js"></script>
+  <!-- Configuration -->
+  <meta charset="utf-8" />
+  <metal http-equiv="refresh" content="30" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page Information -->
+  <meta name="author" content="Ryan Ellis Dale, RyanEllisDale@gmail.com" />
+  <meta name="description" content="Hello Word! I'm Ryan, A games programmer from the UK. I’m committed to continuously improving my skills and contributing to innovative projects." />
+  <meta name="keywords" content="Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume, C++, Js" />
+  <title>Ryan-Ellis Dale Portfolio</title>
+
+  <!-- Linker -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="java.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-    
-<!-- Body -->
+
+<!-- Body / Main -->
+
 <body>
-    
-<div id="GradientBackground">
-      
-    <!-- Collages -->
-    <div class="FlexColumn">
-        <!-- Collage: -->
-        <section class = "Collage">
-            <a href="GEC.html" class="CollageItem RAEngine" id="Item1"></a>
-            <a href="StarRaiders.html" class="CollageItem StarRaiders" id="Item2"></a>
-            <a href="TurnBased.html" class="CollageItem TurnBased" id="Item3"></a>
-            <a href="Robonslaught.html" class="CollageItem Robonslaught" id="Item4"></a>
-            <a href="ThirdPerson.html" class="CollageItem ThirdPerson" id="Item5"></a>
-            <a href="DialogueSystem.html" class="CollageItem DialogueSystem" id="Item6"></a>
-        </section>
+
+  <div id="BodyWrap">
+    <!-- Navigation -->
+    <div class="NavLine">
+      <nav>
+        <ul>
+          <li class="Hover" onclick="Scroll('Welcome')"><strong>Welcome</strong></li>
+          <li class="Hover" onclick="Scroll('SkillsAndSoftware')"><strong>Skills And Software</strong></li>
+          <li class="Hover" onclick="Scroll('Projects')"><strong>Projects</strong></li>
+          <li class="Hover" onclick="Scroll('CV')"><strong>Curriculum Vitae CV</strong></li>
+          <li class="Hover" onclick="Scroll('ExtraCurricular')"><strong>Extra-Curricular</strong></li>
+          <li class="Hover" onclick="Scroll('GameJams')"><strong>Game Jams</strong></li>
+          <li class="Hover" onclick="Scroll('Reading')"><strong>Reading</strong></li>
+          <li class="Hover" onclick="Scroll('Contact')"><strong>Contact</strong></li>
+        </ul>
+      </nav>
     </div>
 
-    <!-- Personal: -->
-    <section class="Summary FlexColumn">
-        <h1>Ryan-Ellis Dale</h1>
-        <h2>Games Programmer</h2>
-        
-        <a href="main.html" class="MarginHorizontalCenter">
-            <button>Explore</button>
-        </a>
-        
-    </section> 
-</div>
+    <!-- Main -->
+    <main>
+      <!-- Welcome -->
+      <header id="Welcome">
+        <span class="TextFinePrint">print("Hello World!");</span>
+        <h1 id="HelloWorld">Hello World!</h1>
+        <h4><span class="TextHighlightPrimary">Ryan </span>Dale</h4>
+        <h4>Games Programmer Studying At Teesside University</h4>
+        <h4 class="TextHighlightPrimary">RyanEllisDale@gmail.com</h4>
+      </header>
 
-</body>    
+      <!-- About Me -->
+      <header class="Pannel">
+        <h2>About Me</h2>
+        <p>I am a dedicated university student pursuing a degree in Games Programming at Teesside University. My journey in game development began in secondary school with Scratch, and I have since advanced to working with Unreal Engine and C++. With a background in games development and computer science, I have also assisted in teaching programming to fellow students. This portfolio highlights my technical skills, showcases my projects, and includes my education, contact information, and social media profiles, along with my CV. If you have any questions, please feel free to reach out.</p>
+      </header>
+
+      <header id="SkillsAndSoftware" class="FlexColumn">
+        <h2>Skills And Software</h2>
+        <h4 class="MarginGapBottom">Languages</h4>
+
+        <div class="InlineBlockWrapper">
+          <div class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/C++Symbol.png" />
+            <span>C++</span>
+          </div>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/LuaSymbol.png" />
+            <span>Lua</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/HTMLSymbol.png" />
+            <span>HTML 5</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/CSSSymbol.png" />
+            <span>CSS 3</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/JavaSymbol.png" />
+            <span>Java</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/LanguageSymbols/PythonSymbol.png" />
+            <span>Python</span>
+          </li>
+        </div>
+
+        <h4 class="MarginGapBottom">Game Engines and IDEs</h4>
+        <div class="InlineBlockWrapper">
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/UnrealEngineSymbol.png" />
+            <span>Unreal Engine 4 / 5</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/RiderSymbol.png" />
+            <span>Jetbrains Rider</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/VisualStudio2022Symbol.png" />
+            <span>Visual Studio 2022</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/VisualStudioCodeSymbol.png" />
+            <span>Visual Studio Code</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/AndroidStudioSymbol.png" />
+            <span>Android Studio Koala</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/GameMakerSymbol.png" />
+            <span>Game Maker Studio 2</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/EditorSymbols/BracketsSymbol.png" />
+            <span>Brackets</span>
+          </li>
+        </div>
+
+        <h4 class="MarginGapBottom">Project Management Software</h4>
+        <div class="InlineBlockWrapper">
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/GithubSymbol.png" />
+            <span>Github</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/GithubDesktopSymbol.png" />
+            <span>Github Desktop</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/TrelloSymbol.png" />
+            <span>Trello</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/MiroSymbol.png" />
+            <span>Miro</span>
+          </li>
+          <li class="Tooltip">
+            <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/ExcelSymbol.png" />
+            <span>Microsoft Excel</span>
+          </li>
+        </div>
+      </header>
+
+
+      <!-- Projects -->
+      <header id="Projects">
+
+        <!-- Current Projects -->
+        <h2>Current Projects:</h2>
+        <div class="FlexRow MediaCenter MarginGapBottom">
+
+          <!-- Astro Bot New Worlds -->
+          <a id="AstroBotNewWorlds" class="Showcase" href="AstrobotNewWorlds.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/AstrobotNewWorldsThumbnail.jpg" />
+              <figcaption>Astrobot New Worlds</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">Current Project</li>
+              <li class="Tag">UE5</li>
+              <li class="Tag">Blueprints</li>
+              <li class="Tag">Journeyman</li>
+              <li class="Tag">Lead</li>
+            </ul>
+            <p>Astrobot was Teesside University's 2025 2nd Year Journeyman's Theme. Astrobot New Worlds is a demonstrative vertical slice of a potential sequal to the original. I am the programming lead behind this project.</p>
+          </a>
+
+          <!-- Project Raver (Hello<3) (You've learnt its name now!)-->
+          <a id="M.A.M" class="Showcase" href="M.A.M.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/LockedThumbnail.jpg" />
+              <figcaption>M.A.M</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">Android Studio</li>
+              <li class="Tag">Java</li>
+              <li class="Tag">Networking</li>
+            </ul>
+            <p>I’ve recently started working on a new project—a multiplayer mobile game for a university assignment. While it's still in the early stages, I'm excited about its potential. The game is being developed using Kotlin in the Linux version of Android Studio and it's being made for mobile devices.</p>
+          </a>
+
+          <!-- End OF Current Projects -->
+        </div>
+
+        <h2>Projects:</h2>
+
+        <div class="FlexRow MediaCenter">
+
+          <!-- Inventory System -->
+          <a id="InventorySystem" class="Showcase" href="Inventory.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/InventoryPluginThumbnail.jpg" />
+              <figcaption>Inventory Plugin</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">UE5</li>
+              <li class="Tag">C++</li>
+              <li class="Tag">Plugin</li>
+              <li class="Tag">Finished</li>
+            </ul>
+            <p>This Inventory Plugin was made for the unreal engine and is built off of Unreal's C++. It is intended to give developers an easy way to construct a variety of Inventory systems without having to develop or script the harder functionalities themselves. </p>
+          </a>
+
+          <!-- GEC -->
+          <a id="GEC" class="Showcase" href="RA-Engine.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/RA-EngineThumbnail.jpg" />
+              <figcaption>RA-Engine</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">C++</li>
+              <li class="Tag">SFML</li>
+              <li class="Tag">Concept</li>
+            </ul>
+            <p>The RA-Engine (Retro Adventure Engine) is a game engine I created in native C++ and a library known as SFML (Simple, Fast, Multimedia Library). It's intended to create 2D NES/Arcade/Gameboy Style Adventure games such as the original Legend of Zelda.</p>
+          </a>
+
+          <!-- Turn Based -->
+          <a id="TurnBased" class="Showcase" href="TurnBased.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/TurnBasedThumbnail.jpg" />
+              <figcaption>Turn Based</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">UE5</li>
+              <li class="Tag">Blueprints</li>
+              <li class="Tag">Solo</li>
+              <li class="Tag">Finished</li>
+            </ul>
+            <p>This prototype was a short project made to test myself on developing a turn-based system. It was made in Unreal Engine 5 via Blueprints and contains 3 levels. One of its most notable features is its camera movement.</p>
+          </a>
+
+          <!-- Star Raiders -->
+          <a id="StarRaiders" class="Showcase" href="StarRaiders.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/StarRaidersThumbnail.JPG">
+              <figcaption>Star Raiders</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">GMS2</li>
+              <li class="Tag">Lead</li>
+              <li class="Tag">Finished</li>
+            </ul>
+            <p>Star Raiders is a side-scroller shoot them up with a twist, the environment is your ammunition! It is a completed project made between me and 2 other developers. I was responsibile for the programming and art direction</p>
+          </a>
+
+          <!-- Third Person -->
+          <a id="ThirdPerson" class="Showcase" href="ThirdPerson.html" target="_blank">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/ThirdPersonThumbnail.jpg" alt="" />
+              <figcaption>Third Person</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">UE5</li>
+              <li class="Tag">Blueprints</li>
+              <li class="Tag">Solo</li>
+              <li class="Tag">Finished</li>
+            </ul>
+            <p>This is my first project in Unreal Engine 5, with this project I aimed to learn about the Blueprints system and its applications. This is a linear 3rd person adventure game with crude but purposeful design.</p>
+          </a>
+
+          <!-- Robonslaught -->
+          <a id="Robonslaught" class="Showcase" target="_blank" href="Robonslaught.html">
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/Thumbnails/RoboThumbnail.JPG" alt="" />
+              <figcaption>Robonslaught</figcaption>
+            </figure>
+            <ul class="InlineBlockWrapper">
+              <li class="Tag">GMS2</li>
+              <li class="Tag">Local Multiplayer</li>
+              <li class="Tag">Concept</li>
+            </ul>
+            <p>Robonslaught is an interesting proof of concept game I created with a focus on local multiplayer. Robonslaught was made in the Game Maker Studio 2 engine and I was sole-y responsible for its design.</p>
+          </a>
+        </div>
+      </header>
+
+      <!-- CV -->
+      <header id="CV">
+        <div class="FlexRow AlignCenter">
+          <div class="FlexColumn">
+            <h2>Curriculum Vitae (CV):</h2>
+            <!-- Online Version -->
+            <a class="TextHighlightPrimary" href="Assets/CV/Ryan-Ellis%20Dale%20CV.pdf" target="_blank">
+              <div class="Tooltip FitContent">
+                <h4>View The Online Version</h4>
+                <span>Ryan-Ellis Dale CV</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Download Button -->
+          <a id="CVDownloadButton" href="Assets/CV/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV.pdf">
+            <div class="Tooltip" style="margin-right: 0">
+              <img class="Tag SmallImgTag" src="Assets/CV/DownloadButton.png" alt="CV Download Button" />
+              <span>Download</span>
+            </div>
+          </a>
+        </div>
+
+
+        <!-- Teesside University: -->
+        <div id="TeessideUniversity" class="Pannel" style="margin-top: 0">
+
+          <!-- Details -->
+          <div class="CVTitle AlignCenter">
+            <img class="Tag SmallImgTag" src="Assets/Education/TeessideUniversityLogo.jpg" alt="" />
+
+
+            <div class="FlexColumn">
+
+              <a href="https://www.tees.ac.uk/undergraduate_courses/computer_games/bsc_(hons)_games_programming.cfm" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h3 class="TextHighlightPrimary">Games Programming Bachelor's degree</h3>
+                  <span>Course Website</span>
+                </div>
+              </a>
+
+              <a href="https://www.tees.ac.uk/undergraduate_courses/initial_teacher_training/ba_(hons)_primary_education_(with_qts).cfm?gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQiA8q--BhDiARIsAP9tKI1_JS2K_HJ5bbpEPvzK4PNIOFsSXdZM6Kd0tt_CRt75MTtz_gm0cRcaAi-WEALw_wcB&gclsrc=aw.ds" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h4>Teesside University</h4>
+                  <span>University Website</span>
+                </div>
+              </a>
+
+            </div>
+
+            <div class="CVDate">
+              <h4>2023 - Current</h4>
+              <h4>Grade: 88% Average</h4>
+            </div>
+          </div>
+
+          <ul>
+            Modules:
+            <li>Game Engine Construction: 91%</li>
+            <li>Programming For Game Engines: 83%</li>
+            <li>Game Software Engineering: 87%</li>
+            <li>Game Programming Fundamentals: 81%</li>
+            <li>Game Creation: 89%</li>
+            <li>Algorithmic Problem Solving: 86%</li>
+          </ul>
+
+          <!-- Related Projects - University -->
+          <h4>Key Related Projects:</h4>
+          <div class="FlexRow ">
+
+            <!-- Astrobot new worlds -->
+            <a class="Card" href="AstrobotNewWorlds.html" target="_blank">
+              <figure class="Thumbnail">
+                <img class="CoverImage" src="Assets/Thumbnails/AstrobotNewWorldsThumbnail.jpg" />
+                <figcaption>Journeyman</figcaption>
+              </figure>
+
+              <div class="InlineBlockWrapper">
+                <div class="Tag">Current Project</div>
+                <div class="Tag">UE5</div>
+                <div class="Tag">Lead</div>
+              </div>
+            </a>
+
+            <!-- GEC -->
+            <a class="Card" target="_blank" href="RA-Engine.html">
+              <figure class="Thumbnail">
+                <img class="CoverImage" src="Assets/Thumbnails/RA-EngineThumbnail.jpg" />
+                <figcaption>RA-Engine</figcaption>
+              </figure>
+
+              <div class="InlineBlockWrapper">
+                <div class="Tag">C++</div>
+                <div class="Tag">SFML</div>
+                <div class="Tag">Concept</div>
+              </div>
+            </a>
+
+            <!-- Inventory -->
+            <a class="Card" href="Inventory.html" target="_blank">
+              <figure class="Thumbnail">
+                <img class="CoverImage" src="Assets/Thumbnails/InventoryPluginThumbnail.jpg" />
+                <figcaption>Inventory Plugin</figcaption>
+              </figure>
+
+              <div class="InlineBlockWrapper">
+                <div class="Tag">UE5</div>
+                <div class="Tag">C++</div>
+                <div class="Tag">Plugin</div>
+                <div class="Tag">Finished</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- Teaching Assistant: -->
+        <div class="Pannel">
+
+          <!-- Details -->
+          <div class="CVTitle AlignCenter">
+
+            <img class="Tag SmallImgTag" src="Assets/Education/SouthTynesideCollege.png" />
+            <div class="FlexColumn">
+              <h3 class="TextHighlightPrimary">Teaching Assistant</h3>
+              <div class="Tooltip FitContent">
+                <h4>South Tyneside College</h4>
+                <span>College Website</span>
+              </div>
+            </div>
+            <h4 class="CVDate MarginGapBottom">2022 - 2023</h4>
+          </div>
+
+
+          <p class="MarginGapBottom">As a Teaching Assistant for the Games Programming course, I supported both students and lecturers in delivering and understanding key course materials. I played a key role in communicating complex programming concepts, helping students with their coursework, and developing learning resources, including coding exercises and demonstration materials. Additionally, I prepared the classroom for various activities, ensuring all materials and equipment were ready to support effective teaching and learning. This role allowed me to build strong communication and teamwork skills while enhancing my ability to explain technical concepts in an accessible way, contributing to a positive and engaging learning environment.</p>
+
+          <ul>
+            Certifications:
+            <li>Equality & Diversity Training</li>
+            <li>Data Protection Essentials: GDPR</li>
+            <li>Fire Safety</li>
+            <li>Information Security Essentials</li>
+            <li>Harzardous Substances Saftey</li>
+            <li>Lifting & Carrying</li>
+            <li>Personal Saftey</li>
+            <li>Stress Busting</li>
+            <li>Reporting Health & Saftey Incidents</li>
+            <li>Working With the Prevent Duty</li>
+            <li>Working with Computers</li>
+          </ul>
+        </div>
+
+
+        <!-- Computer Science: -->
+        <div class="Pannel">
+
+          <!-- Details -->
+          <div class="CVTitle AlignCenter">
+
+            <img class="Tag SmallImgTag" src="Assets/Education/SouthTynesideCollege.png" />
+
+            <div class="FlexColumn">
+              <a href="https://www.stc.ac.uk/course/btec-foundation-diploma-computer-science-software-development-level-3-year-1/" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h3 class="TextHighlightPrimary">Level 3 Computer Science Foundation Diploma</h3>
+                  <span>Course Website</span>
+                </div>
+              </a>
+
+              <a href="https://www.stc.ac.uk/" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h4>South Tyneside College</h4>
+                  <span>College Website</span>
+                </div>
+              </a>
+
+            </div>
+            <div class="CVDate">
+              <h4>2022 - 2023</h4>
+              <h4>Grade: Distinction</h4>
+            </div>
+          </div>
+
+          <ul>
+            Modules:
+            <li>Computer Games Development: Distinction</li>
+            <li>IT Systems Security and Encryption: Distinction</li>
+            <li>Website Development: Distinction</li>
+            <li>Business Applications of Social Media: Distinction</li>
+            <li>Fundamentals of Computer Systems: Merit</li>
+            <li>Principles of Computer Science: Pass</li>
+          </ul>
+        </div>
+
+        <!-- Games Development (Creative Media) -->
+        <div class="Pannel">
+
+          <!-- Details -->
+          <div class="CVTitle AlignCenter">
+
+
+            <img class="Tag SmallImgTag" src="Assets/Education/SouthTynesideCollege.png" />
+
+            <div class="FlexColumn">
+
+              <a href="https://www.stc.ac.uk/subject/media-production-and-games-design/" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h3 class="TextHighlightPrimary">Level 3 Creative Digital Media Extended Diploma</h3>
+                  <span>Course Website</span>
+                </div>
+              </a>
+
+
+              <a href="https://www.stc.ac.uk/" target="_blank">
+                <div class="Tooltip FitContent">
+                  <h4>South Tyneside College</h4>
+                  <span>College Website</span>
+                </div>
+              </a>
+
+            </div>
+
+
+            <div class="CVDate">
+              <h4>2020 - 2022</h4>
+              <h4>Grade: Distinction, Distinction, Merit</h4>
+            </div>
+          </div>
+
+          <ul>
+            Modules:
+            <li>Working in The Creative Media Industry: Distinction</li>
+            <li>Digital Games Production: Distinction</li>
+            <li>Concept Art for Computer Games: Distinction</li>
+            <li>Media Representations: Merit</li>
+            <li>Digital Media Skills: Merit</li>
+            <li>Media Campaigns: Merit</li>
+            <li>Website Production: Merit</li>
+            <li>Games Engine Scripting: Merit</li>
+            <li>3D Modelling: Merit</li>
+            <li>3D Environments: Merit</li>
+            <li>App Production: Merit</li>
+            <li>Specialist Subject Investigations: Pass</li>
+            <li>Pre-Production for Portfolio: Pass</li>
+          </ul>
+
+          <!-- Related Projects - University -->
+          <h4>Key Related Projects:</h4>
+          <div class="FlexRow">
+
+            <!-- Star Raiders -->
+            <a class="Card" href="StarRaiders.html" target="_blank">
+              <figure class="Thumbnail">
+                <img class="CoverImage" src="Assets/Thumbnails/StarRaidersThumbnail.JPG" />
+                <figcaption>Star Raiders</figcaption>
+              </figure>
+
+              <div class="InlineBlockWrapper">
+                <div class="Tag">GSM2</div>
+                <div class="Tag">Lead</div>
+                <div class="Tag">Finished</div>
+              </div>
+            </a>
+
+            <!-- Robonslaught -->
+            <a class="Card" href="Robonslaught.html" target="_blank">
+              <figure class="Thumbnail">
+                <img class="CoverImage" src="Assets/Thumbnails/RoboThumbnail.JPG" />
+                <figcaption>Robonslaught</figcaption>
+              </figure>
+
+              <div class="InlineBlockWrapper">
+                <div class="Tag">GSM2</div>
+                <div class="Tag">Local Co-Op</div>
+                <div class="Tag">Concept</div>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </header>
+
+      <!-- Extra-curricular -->
+      <header id="ExtraCurricular">
+        <h2>Extra-Curricular:</h2>
+
+
+        <div class="FlexRow MediaCenter">
+
+          <!-- Programming Society-->
+          <div class="Stamp EX">
+            <img src="Assets/Extra-Curricular/TUGPCover.jpg" />
+            <h3 class="TextHighlightPrimary">Games Programming Society</h3>
+            <h3 class="MarginGapBottom">Teesside university</h3>
+            <a href="https://tees.unioncloud.org/groups/games-programming" class="TextHighlightPrimary" target="_blank">View The Website</a>
+            <p>I am the chair and founder of the Teesside University's Games Programming Society. The programming society is an academic society built around a community of programmers all working on their course work and passion projects.</p>
+          </div>
+
+          <!-- Course Representative -->
+          <div class="Stamp EX">
+            <img src="Assets/Extra-Curricular/TeessideUniversityCover.jpg" />
+            <h3 class="TextHighlightPrimary">Course Representative</h3>
+            <h3 class="MarginGapBottom">Teesside university</h3>
+            <p>During my first year of university, I volunteered to be that year's course representative for games programming. In this position I was responsible for student to university communication. I developed a lot of key management, organisational and communicative skills from this role.</p>
+          </div>
+
+          <!-- Class Representative -->
+          <div class="Stamp EX">
+            <img src="Assets/Extra-Curricular/SouthTynesideCollegeCover.jpg" />
+            <h3 class="TextHighlightPrimary">Class Representative</h3>
+            <h3 class="MarginGapBottom">South Tyneside College</h3>
+            <p>In my third year of college, I got the position of Class Representative for My Computer Science Class. In this role, I got to speak to the higher up staff of the college about the inner workings of the course and how it could be improved. I was tasked with gathering feedback and spreading informations from and to the students.</p>
+          </div>
+
+          <!-- CPA -->
+          <div class="Stamp EX">
+            <img src="Assets/Extra-Curricular/CaringPersonalAssistantsCover.jpg" />
+            <h3 class="TextHighlightPrimary">CPA Website</h3>
+            <h3 class="MarginGapBottom">Caring Personal Assistants</h3>
+            <a href="https://www.cpacare.co.uk/" class="TextHighlightPrimary" target="_blank">View The Website</a>
+            <p>During my third year of college I took an oppertunity to develop a prototype for Caring Personal Assistants ltd's new website. After having created a fully fledged prototype, I was tasked with incorporating it's favoured elements into the final version of the site.</p>
+          </div>
+
+          <!--Cost Of Living Crisis -->
+          <div class="Stamp EX">
+            <img src="Assets/Extra-Curricular/SunderlandSoftwareCityCover.jpg" />
+            <h3 class="TextHighlightPrimary">Cost Of Living Crisis</h3>
+            <h3 class="MarginGapBottom">Sunderland Software City</h3>
+            <a href="https://www.sunderlandsoftwarecity.com/news/introducing-the-cost-of-living-challenge" class="TextHighlightPrimary" target="_blank">View The Website</a>
+            <p>In 2022, I led a team that tackled Sunderland City Software's cost of living challenge. We created a mobile game design pitch focused on teaching children budgeting and building good habits. Our pitch, "House Panic," won the event.</p>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Game Jams -->
+      <header id="GameJams">
+        <h2>Hosted Game Jams:</h2>
+
+        <div class="FlexRow MediaCenter">
+          <!-- C.A.P JAM-->
+          <div id="CAPJam" class="Showcase ">
+            <!-- Thumbnail -->
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/GameJams/CapJamThumbnail.jpeg" />
+              <figcaption>CAP Jam</figcaption>
+            </figure>
+
+            <!-- Tags -->
+            <div class="InlineBlockWrapper">
+              <div class="Tag Tooltip Hover" onclick="Scroll('TUGP')">
+                TUGP
+                <span>Teesside University Games Programming</span>
+              </div>
+              <div class="Tag Tooltip Hover" onclick="Scroll('TeessideUniversity')">
+                University
+                <span>Teesside University</span>
+              </div>
+              <div class="Tag">Itch.io</div>
+            </div>
+
+            <!-- Description -->
+            <a href="https://itch.io/jam/cap-jam-teesside" class="TextHighlightPrimary" target="_blank">View The Website</a>
+            <p class="MarginTop">The Creation, Arts, and Programming (CAP) Jam was a game jam organised and hosted by the listed societies. As the chair and founder of the games programming society I was closely tied to the CAP Jam. The CAP Jam was a nice success with 8 submitted titles. </p>
+          </div>
+
+          <!-- South Tyneside College 2023 -->
+          <div id="STC2023" class="Showcase ">
+
+            <!-- Thumbnail -->
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/GameJams/SouthTynesideCollegeThumbnail.jpg" />
+              <figcaption>STC 2023</figcaption>
+            </figure>
+
+            <!-- Tags -->
+            <div class="InlineBlockWrapper">
+              <div class="Tag">College</div>
+              <div class="Tag">In-Person</div>
+            </div>
+
+            <!-- Description -->
+            <p>After my time at South Tyneside College I was invited back to hold a game jam for the student, the theme they were given was "Arcade", they were to either develop a game project or a 3D environment. This was the first one that was held and the event is planned to be a re-curring Jam.</p>
+          </div>
+
+          <!-- South Tyneside College 2025 -->
+          <div id="STC2025" class="Showcase ">
+
+            <!-- Thumbnail -->
+            <figure class="Thumbnail">
+              <img class="CoverImage" src="Assets/GameJams/SouthTynesideCollegeThumbnail.jpg" />
+              <figcaption>Upcoming - STC 2025</figcaption>
+            </figure>
+
+            <!-- Tags -->
+            <div class="InlineBlockWrapper">
+              <div class="Tag">Pending</div>
+            </div>
+
+            <!-- Description -->
+            <p>The next South Tyneside College Student Game Jam is due in June.</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Reading -->
+      <header id="Reading">
+        <h2>Reading:</h2>
+
+
+
+        <!-- Book Wrapper -->
+        <div class="FlexRow MediaCenter">
+
+          <!-- Game Programming Patterns -->
+          <a href="https://gameprogrammingpatterns.com/" target="_blank">
+            <figure class="Stamp Book">
+              <!-- Book -->
+              <img class="CoverImage" src="Assets/Reading/GameProgrammingPatterns.jpg" alt="Games Programming Patterns Robert Nystrom" />
+              <figcaption>
+                <div class="Tag">Finished</div>
+                <h3 class="TextHighlightPrimary">Game Programming Patterns</h3>
+                <h4>Robert Nystrom</h4>
+                <h4>2nd Novembet 2014</h4>
+              </figcaption>
+            </figure>
+          </a>
+
+          <!-- Game Engine Architecture -->
+          <!-- Currently Reading -->
+          <figure class="Stamp Book">
+            <!-- Book -->
+            <img class="CoverImage" src="Assets/Reading/GameEngineArchitecture.jpg" alt="Games Engine Architecture Jason Gregory" />
+            <figcaption>
+              <div class="Tag">Currently Reading</div>
+              <h3 class="TextHighlightPrimary">Game Engine Architecture</h3>
+              <h4>Jason Gregory</h4>
+              <h4>15th June 2009</h4>
+            </figcaption>
+          </figure>
+
+        </div>
+
+      </header>
+
+      <!-- Footer - Contact -->
+      <footer class="FlexColumn" id="Contact">
+
+
+        <h2>Contact:</h2>
+        <q class="TextHighlightPrimary">What are you so hesitant about? It’s your dream, isn’t it? It’s right in front of you, and you’re wavering? You gotta be reckless and take whatever you can</q>
+
+        <!-- Contacts -->
+        <div class="FlexRow MediaCenter MarginGapBottom">
+
+          <!-- Github -->
+          <a href="https://github.com/RyanEllisDale" target="_blank">
+            <figure>
+              <img class="Tag BigImgTag" src="Assets/Contact/GithubSymbol.png" />
+              <figcaption>Ryan Ellis Dale</figcaption>
+            </figure>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ryan-ellis-dale-869859334/" target="_blank">
+            <figure><img class="Tag BigImgTag" src="Assets/Contact/LinkedInSymbol.png" />
+              <figcaption>Ryan Ellis Dale</figcaption>
+            </figure>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:ryanellisdale@gmail.com">
+            <figure>
+              <img class="Tag BigImgTag" src="Assets/Contact/EmailSymbol.png" />
+              <figcaption>RyanEllisDale@Gmail.Com</figcaption>
+            </figure>
+          </a>
+
+          <!-- Location -->
+          <div>
+            <figure>
+              <img class="Tag BigImgTag" src="Assets/Contact/LocationSymbol.png" />
+              <figcaption>United Kingdom</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Thank You -->
+        <em>Thank you for visiting my portfolio.</em>
+        <em>Hope to hear from you soon.</em>
+
+      </footer>
+    </main>
+  </div>
+</body>
+
 </html>

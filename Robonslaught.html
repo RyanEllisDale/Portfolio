@@ -1,143 +1,182 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
-<!-- Header -->
+<!-- Head -->
+
 <head>
-    <!-- Meta Information -->
-    <meta name = "author" content= "Ryan Ellis Dale" />
-    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
-    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
-    
-    <meta charset = "utf-8" />
-    <metal http-equiv="refresh" content= "30" />
-    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
-    
-    <!-- Page Information -->
-    <title>Robonslaught</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="java.js"></script>
+  <!-- Configuration -->
+  <meta charset="utf-8" />
+  <metal http-equiv="refresh" content="30" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page Information -->
+  <meta name="author" content="Ryan Ellis Dale, RyanEllisDale@gmail.com" />
+  <meta name="description" content="Hello Word! I'm Ryan, A games programmer from the UK. I’m committed to continuously improving my skills and contributing to innovative projects." />
+  <meta name="keywords" content="Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume, C++, Js" />
+  <title>Ryan-Ellis Dale Portfolio</title>
+
+  <!-- Linker -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="java.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-    
-<!-- Body -->
+
+<!-- Body / Main -->
+
 <body>
-    
-    <header class="FlexRow">
-        <a href="main.html">
-            <h1 id="RED">R.E.D</h1>
-        </a>
-        <div class="FlexRow HeaderIconTrack">
-            
-            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
-                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
-            </a>
-            
-            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
-                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
-            </a>    
-                
-            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
-                <img src="Assets/icons8-file.svg"/>
-            </a>
-        </div>
-    </header>
-    
-    <section class="AboutProject">
-        
-        <a href="main.html">
-            <img id="BackArrow" src="Assets/BackArrow.png" />
-        </a>
-        
-        <!-- Details: -->
-        <h1>Robonslaught</h1>
-        
-        <ul>
-            <li class="Tag">GSM2 / GML</li>
-            <li class="Tag">Designer</li>
-        </ul>
-        
-        <div class="SnapShotsWrapper">
-            <span>Snap Shots:</span>
-            <div>
-                <div class="SnapShot" id="RobonslaughtShot1"></div>
-                <div class="SnapShot" id="RobonslaughtShot2"></div>
-                <div class="SnapShot" id="RobonslaughtShot3"></div>
-            </div>
-        </div>
-        
-        <div class="Line MarginHorizontalCenter"></div>
-        
-    </section>
-    
-    <section class="SectionHeader">
-        <h1>About:</h1>
-        <p>Project Details</p>
-    </section>
-    
-    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
-        
-       <p>Robonslaught was developed as a prototype proof of concept using GameMaker Studio 2. The game centers on the concept of one player being confined to a small space while another player launches hazards from outside that space. This idea was inspired by the unique RPG battle system of the game Undertale.<br><br>While Robonslaught was envisioned primarily as a local multiplayer experience, it also includes single-player modes against AI opponents. The development process spanned approximately two months, beginning with simple sprites moving within a black void and ultimately evolving into the Project it is today, featuring a diverse array of weapons and custom sprites.</p>
-                
-    </div>        
-        
-    <section class="SectionHeader">
-        <h1>Highlights:</h1>
-        <p>A little about the creation of this project</p>
-    </section>
-    
-    <section class="History FlexColumn">
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/Robonslaught/Attacking.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Game Loop:</span>
-                <p>As Robonslaught was developed as a proof of concept and diverged from traditional gaming conventions, it provided an excellent opportunity to explore a variety of innovative ideas, each presenting unique programming challenges. One significant challenge was implementing comprehensive controller support, as the game was designed for local multiplayer. I integrated full controller functionality throughout the project and tailored the main gameplay mechanics to utilize the joystick effectively.<br><br>Through the development of Robonslaught, I gained extensive experience in several key areas, including encapsulation, technical music control, collision detection, pixel-perfect collisions, input handling across multiple devices, and adherence to programming conventions.</p>
-            </div>
-        </div>
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/Robonslaught/Version0.4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Version 0.4:</span>
-                <p>In this iteration, I incorporated collision mechanics for the blue player, including interactions with projectiles and walls. This version also marked the introduction of health and timer mechanics that ultimately made it into the final release.<br><br>Additionally, I developed a dash mechanic for the blue player, which posed challenges for collision detection due to the rapid movement often leading to missed collision registrations. If given the opportunity to revisit Robonslaught, I would reintroduce the dash mechanic, leveraging my improved understanding of collision systems. Specifically, I would explore the implementation of a ray-tracking collision system to enhance accuracy.</p>
-            </div>
-        </div>
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/Robonslaught/1stEntry.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Version 0.1:</span>
-                <p>Here I've pulled up the first iteration of Robonslaught. In this version we can see the traits that would go on to show up in Robonslaught, such as the switching projectiles, and the circlur-moving attacker.</p>
-            </div>
-        </div>
-    
-    </section>    
-    
-    <div class="Line"></div>
-    
-    <section class="SectionHeader">
-        <h1>Known Issues:</h1>
-        <p>| Massive Difficulty Imbalance in single player</p>
-    </section>
-    
-    <section class="SectionHeader">
-        <a href="https://github.com/RyanEllisDale/Robonslaught.git" target="_blank">
-            <button>Visit Project</button>
-        </a>
-    </section>
-    
-     <footer class="FlexColumn">
-        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
-        <span></span>
-    </footer>
-    
-</body>    
+
+  <span class="TextFinePrint" style="margin-left: 10px">print("Robonslaught");</span>
+  <div class="ProjectBody FlexColumn AlignCenter" id="About">
+
+    <!-- Detailing -->
+    <h1>Robonslaught</h1>
+    <ul class="InlineBlockWrapper">
+      <li class="Tag">GMS2</li>
+      <li class="Tag">Local Multiplayer</li>
+      <li class="Tag">Concept</li>
+      <li class="Tag">Solo Development</li>
+    </ul>
+
+    <!-- Tools Used -->
+    <div class="InlineBlockWrapper">
+      <div class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/GameMakerSymbol.png" />
+        <span>Game Maker Studio 2</span>
+      </div>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/AudacitySymbol.png" />
+        <span>Audacity</span>
+      </li>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/TrelloSymbol.png" />
+        <span>Trello</span>
+      </li>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/AespriteSymbol.png" />
+        <span>Aseprite</span>
+      </li>
+    </div>
+
+    <!-- Figure Snap Shots -->
+    <h3>SnapShots:</h3>
+    <div class="FlexRow MediaCenter MarginGapBottom" style="margin-top: var(--MarginA20);">
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -160px" loop autoplay muted>
+          <source src="Assets/Projects/Robonslaught/Defending.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Aggressive AI</figcaption>
+      </figure>>
+
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -80px" loop autoplay muted>
+          <source src="Assets/Projects/Robonslaught/Local.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Local Multiplayer</figcaption>
+      </figure>
+
+
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -160px" loop autoplay muted>
+          <source src="Assets/Projects/Robonslaught/Version0.4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Beta Pipeline</figcaption>
+      </figure>
+
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -160px" loop autoplay muted>
+          <source src="Assets/Projects/Robonslaught/Attacking.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Multiple Game Modes</figcaption>
+      </figure>
+    </div>
+
+    <!-- Github -->
+    <a href="https://github.com/RyanEllisDale/Robonslaught" target="_blank">
+      <button class="Tooltip">Visit Project<span>Robonslaught</span></button>
+    </a>
+
+    <!-- About Me -->
+    <div class="Pannel ProjectPannel">
+      <h2>About Robonslaught</h2>
+      <p>Robonslaught was developed as a prototype proof of concept in GameMaker Studio 2, inspired by the unique RPG battle mechanics of Undertale. The game explores an asymmetrical multiplayer concept where one player is confined to a small arena while another launches hazards from outside. Originally designed for local multiplayer, it also features single-player modes with AI-controlled opponents. Over a two-month development period, Robonslaught grew from a simple prototype with basic sprites into a fully playable experience, featuring a variety of weapons, custom visuals, and refined gameplay mechanics.</p>
+    </div>
+
+    <!-- What I learnt -->
+    <div class="Pannel ProjectPannel">
+      <h3>What I learnt:</h3>
+      <p>Robonslaught was my next 2D project following Star Raiders, and much of what I learned during that earlier development proved invaluable here. With Robonslaught, I focused on a more structured development cycle, progressing through alpha, beta, and a final vertical slice demo that was actively playtested. This process taught me a lot about development flow, bug fixing, and refining gameplay based on feedback. It was also my first in-depth exploration of local multiplayer design—a style that has since become a staple in my work. During development, I gained valuable experience in building reusable character code, making it easier to scale and iterate on mechanics. I also explored different approaches to AI, creating multiple types of enemies that behaved uniquely to challenge the player in varied ways. Additionally, I deepened my understanding of controller support, learning how to map and manage inputs for multiple devices.</p>
+      <ul>
+        Key Points:
+        <li>Input Context Mapping</li>
+        <li>State Machines</li>
+        <li>Playtesting</li>
+        <li>Different Game Modes</li>
+        <li>Win/Loss Conditions</li>
+        <li>Local Multiplayer</li>
+        <li>General Gameplay Programming Optimizations</li>
+        <li>Proper Debugging</li>
+        <li>Controller Support</li>
+        <li>AIs With Differing Behaviour</li>
+        <li>Development Cycle</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer - Contact -->
+  <footer class="FlexColumn" id="Contact">
+
+
+    <h2>Contact:</h2>
+    <q class="TextHighlightPrimary">What are you so hesitant about? It’s your dream, isn’t it? It’s right in front of you, and you’re wavering? You gotta be reckless and take whatever you can</q>
+
+    <!-- Contacts -->
+    <div class="FlexRow MediaCenter MarginGapBottom">
+
+      <!-- Github -->
+      <a href="https://github.com/RyanEllisDale" target="_blank">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/GithubSymbol.png" />
+          <figcaption>Ryan Ellis Dale</figcaption>
+        </figure>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ryan-ellis-dale-869859334/" target="_blank">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/LinkedInSymbol.png" />
+          <figcaption>Ryan Ellis Dale</figcaption>
+        </figure>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:ryanellisdale@gmail.com">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/EmailSymbol.png" />
+          <figcaption>RyanEllisDale@Gmail.Com</figcaption>
+        </figure>
+      </a>
+
+      <!-- Location -->
+      <div>
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/LocationSymbol.png" />
+          <figcaption>United Kingdom</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Thank You -->
+    <em>Thank you for visiting my portfolio.</em>
+    <em>Hope to hear from you soon.</em>
+
+  </footer>
+
+
+</body>
+
 </html>

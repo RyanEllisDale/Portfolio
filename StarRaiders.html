@@ -1,147 +1,175 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
-<!-- Header -->
+<!-- Head -->
+
 <head>
-    <!-- Meta Information -->
-    <meta name = "author" content= "Ryan Ellis Dale" />
-    <meta name = "description" content = "Dedicated programmer specializing in game and web development, with a strong focus on writing clean and efficient code. I thrive on collaboration and am eager to work with a team of like-minded professionals. Always seeking to connect with others in the industry, I’m committed to continuously improving my skills and contributing to innovative projects." />
-    <meta name = "keywords" content = "Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume" />
-    
-    <meta charset = "utf-8" />
-    <metal http-equiv="refresh" content= "30" />
-    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
-    
-    <!-- Page Information -->
-    <title>Star Raiders</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="java.js"></script>
+  <!-- Configuration -->
+  <meta charset="utf-8" />
+  <metal http-equiv="refresh" content="30" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page Information -->
+  <meta name="author" content="Ryan Ellis Dale, RyanEllisDale@gmail.com" />
+  <meta name="description" content="Hello Word! I'm Ryan, A games programmer from the UK. I’m committed to continuously improving my skills and contributing to innovative projects." />
+  <meta name="keywords" content="Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume, C++, Js" />
+  <title>Ryan-Ellis Dale Portfolio</title>
+
+  <!-- Linker -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="java.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-    
-<!-- Body -->
+
+<!-- Body / Main -->
+
 <body>
-    
-    <header class="FlexRow">
-        <a href="main.html">
-            <h1 id="RED">R.E.D</h1>
-        </a>
-        <div class="FlexRow HeaderIconTrack">
-            
-            <a class="HeaderIcon" href="https:\\linkedin.com/in/ryan-ellis-dale-869859334" target="_blank">
-                <img class="HeaderIcon" src="Assets/icons8-linkedin.svg"/>
-            </a>
-            
-            <a class="HeaderIcon" href="https://github.com/RyanEllisDale" target="_blank">
-                <img class="HeaderIcon" src="Assets/icons8-github.svg"/>
-            </a>    
-                
-            <a class="HeaderIcon" href="Assets/Ryan-Ellis%20Dale%20CV.pdf" download="Ryan-Ellis Dale CV">
-                <img src="Assets/icons8-file.svg"/>
-            </a>
-        </div>
-    </header>
-    
-    <section class="AboutProject">
-        
-        <a href="main.html">
-            <img id="BackArrow" src="Assets/BackArrow.png" />
-        </a>
-        
-        <!-- Details: -->
-        <h1>Star Raiders</h1>
-        
-        <ul>
-            <li class="Tag">GSM2 / GML</li>
-            <li class="Tag">Lead Programmer</li>
-            <li class="Tag">Designer</li>
-        </ul>
-        
-        <div class="SnapShotsWrapper">
-            <span>Snap Shots:</span>
-            <div>
-                <div class="SnapShot" id="StarRaidersShot1"></div>
-                <div class="SnapShot" id="StarRaidersShot2"></div>
-                <div class="SnapShot" id="StarRaidersShot3"></div>
-            </div>
-        </div>
-        
-        <div class="Line MarginHorizontalCenter"></div>
-        
-    </section>
-    
-    <section class="SectionHeader">
-        <h1>About:</h1>
-        <p>Project Details</p>
-    </section>
-    
-    <div class="DetailsWrapper FlexColumn MarginHorizontalCenter">
-        
-       <p>Star Raiders was a collaborative game development project I worked on with two other team members. I served as the lead art director and programmer, overseeing the technical architecture of the game's systems.<br><br>Star Raiders is a monochrome 2D shoot-'em-up where players can collect parts of the environment or enemies to use as both cover and weapons while navigating through space. The game features three main modes: Normal, Endless, and Duo/Versus, along with a separate hard mode and a boss fight. We spent two months developing Star Raiders before its completion.</p>
-                
-    </div>        
-        
-    <section class="SectionHeader">
-        <h1>Highlights:</h1>
-        <p>A little about the creation of this project</p>
-    </section>
-    
-    <section class="History FlexColumn">
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/StarRaiders/Level1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Game Loop:</span>
-                <p>In the main game of Star Raiders, I developed several key systems, including: Enemy AI Behavior, Player Movement, the Grab Mechanic, the User Interface, a retro-style lives system, win-loss mechanics, and the scoring system.<br><br>Through this process, I learned to effectively utilize key programming concepts such as RNG (pseudo-randomly generated numbers), iteration, parent/child objects, object-oriented programming, and global variables.<br><br>If I were to remake Star Raiders, I would focus on reworking the enemy behavior and making the grabbing system more engaging and dynamic. One common suggestion I received was to allow grabbed enemies to shoot projectiles on the player's behalf, which I think would be a fun addition.</p>
-            </div>
-        </div>
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/StarRaiders/Boss.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Boss:</span>
-                <p>The boss in Star Raiders showcases the enemy AI behavior logic I developed during the project. His programming is straightforward, primarily using cooldown counters and pseudo-randomly generated numbers. He has a chance to move up or down quickly as the player fires at him, creating the illusion that he’s dodging with reflexes.<br><br>If I were to redesign the boss, I would consider using a finite-state machine, as I didn't get to implement many of those in Star Raiders, and I think they would have worked well.<br><br>Additionally, the difficulty of the boss scales with his health points (HP). This was achieved by having the random object spawner monitor the boss's HP and trigger changes when it drops below a certain threshold.</p>
-            </div>
-        </div>
-        
-        <div class="HistoryFlex">
-            <video controls loop>
-                <source src="Assets/StarRaiders/Endless.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="FlexColumn">
-                <span>Endless:</span>
-                <p>Endless mode uses some of the same logic as the boss fight, including a random object spawner and increasing difficulty. However, in Endless mode, the difficulty increases over time rather than through a health bar.<br><br>One key lesson I learned from developing Endless mode was about memory management. It became crucial to destroy objects that had moved offscreen during the endless runs; otherwise, they would remain in memory and eventually cause the computer to run out of resources.<br><br>If I were to redesign the Endless mode, I would like to add more variety to the objects that can spawn and potentially implement a component system to create a range of different objects with unique effects dynamically.</p>
-            </div>
-        </div>
-    
-    </section>    
-    
-    <div class="Line"></div>
-    
-    <section class="SectionHeader">
-        <h1>Known Issues:</h1>
-        <p>| After game was imported to a newer version of GMS2, Duo Mode Broke.</p>
-        <p>| If the cursor goes off the screen it will sink into the black space.</p>
-        <p>| Messing around whilst on the enter name screen can mess up the leaderboard.</p>
-        <p>| Entities spawn closer to the player than they should on endless mode.</p>
-    </section>
-    
-    <section class="SectionHeader">
-        <a href="https://github.com/RyanEllisDale/Star-Raiders.git" target="_blank">
-            <button>Visit Project</button>
-        </a>
-    </section>
-    
-     <footer class="FlexColumn">
-        <p>© Portfolio of Ryan-Ellis Dale :: 2024</p>  
-        <span></span>
-    </footer>
-    
-</body>    
+
+  <span class="TextFinePrint" style="margin-left: 10px">print("Star Raiders");</span>
+  <div class="ProjectBody FlexColumn AlignCenter" id="About">
+
+    <!-- Detailing -->
+    <h1>Star Raiders</h1>
+    <ul class="InlineBlockWrapper">
+      <li class="Tag">GMS2</li>
+      <li class="Tag">Lead</li>
+      <li class="Tag">Finished</li>
+      <li class="Tag">Cross Discipline</li>
+    </ul>
+
+    <!-- Tools Used -->
+    <div class="InlineBlockWrapper">
+      <div class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/GameMakerSymbol.png" />
+        <span>Game Maker Studio 2</span>
+      </div>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/AudacitySymbol.png" />
+        <span>Audacity</span>
+      </li>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/ExcelSymbol.png" />
+        <span>Excel</span>
+      </li>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/ProjectManagementSymbols/TrelloSymbol.png" />
+        <span>Trello</span>
+      </li>
+      <li class="Tooltip">
+        <img class="Tag SmallImgTag" src="Assets/EditorSymbols/AespriteSymbol.png" />
+        <span>Aseprite</span>
+      </li>
+    </div>
+
+    <!-- Figure Snap Shots -->
+    <h3>SnapShots:</h3>
+    <div class="FlexRow MediaCenter MarginGapBottom" style="margin-top: var(--MarginA20);">
+      <figure class="SnapShot">
+        <img class="CoverImage" src="Assets/Thumbnails/StarRaidersThumbnail.JPG">
+        <figcaption>Menu Screen</figcaption>
+      </figure>
+
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -80px" loop autoplay muted>
+          <source src="Assets/Projects/StarRaiders/Level1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Level 1</figcaption>
+      </figure>
+
+
+      <figure class="SnapShot">
+        <video class="CoverImage" style="object-position: -160px" loop autoplay muted>
+          <source src="Assets/Projects/StarRaiders/Boss.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Boss Fight</figcaption>
+      </figure>
+    </div>
+
+    <!-- Github -->
+    <a href="https://github.com/RyanEllisDale/Star-Raiders.git" target="_blank">
+      <button class="Tooltip">Visit Project<span>Star Raiders</span></button>
+    </a>
+
+    <!-- About Me -->
+    <div class="Pannel ProjectPannel">
+      <h2>About Star Raiders</h2>
+      <p>A 2D arcade-style, horizontally scrolling shoot 'em up developed by a small team of three, where players use the environment as ammunition to battle enemies and progress through increasingly challenging levels. As the lead programmer, I was responsible for the complete mechanical/tech development of the game, including core gameplay mechanics, enemy AI, and some level design. I implemented the player's interaction with the environment, enabling them to strategically use objects as projectiles. The game was developed using GameMaker Studio 2 and its native scripting language, GameMaker Language (GML). One of the key challenges I overcame was making the game's elements work across multiple game types (Endless, Duo, Etc). The game is now being used as a course demonstration piece at South Tyneside College, showcasing its technical features, gameplay design, and collaborative development process.</p>
+    </div>
+
+    <!-- What I learnt -->
+    <div class="Pannel ProjectPannel">
+      <h3>What I learnt:</h3>
+      <p>This was my first major project, marking a shift from tutorial-based work to a collaborative, self-driven development experience. I had the opportunity to work alongside <strong>Ryan Kidney</strong>, who handled the art and later level designs, and <strong>Ben Car</strong>, who took on play-testing and sound design. Their contributions were vital in bringing this game to life. Throughout the project, I gained invaluable experience, learning the fundamentals of gameplay programming and how to effectively work within an engine. It also provided me with a deeper understanding of 2D graphics programming, knowledge that I later applied in the creation of the <strong>RA-Engine</strong>.</p>
+      <ul>
+        Contributions:
+        <li>Player Characters Development</li>
+        <li>Enemy AI</li>
+        <li>Menu Screen</li>
+        <li>Different Game Modes</li>
+        <li>Win/Loss Conditions</li>
+        <li>Save Data</li>
+        <li>Sound Implementation</li>
+        <li>Arcade Style Live System</li>
+        <li>Everything</li>
+        <li>Project Management</li>
+        <li>Polish</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer - Contact -->
+  <footer class="FlexColumn" id="Contact">
+
+
+    <h2>Contact:</h2>
+    <q class="TextHighlightPrimary">What are you so hesitant about? It’s your dream, isn’t it? It’s right in front of you, and you’re wavering? You gotta be reckless and take whatever you can</q>
+
+    <!-- Contacts -->
+    <div class="FlexRow MediaCenter MarginGapBottom">
+
+      <!-- Github -->
+      <a href="https://github.com/RyanEllisDale" target="_blank">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/GithubSymbol.png" />
+          <figcaption>Ryan Ellis Dale</figcaption>
+        </figure>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ryan-ellis-dale-869859334/" target="_blank">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/LinkedInSymbol.png" />
+          <figcaption>Ryan Ellis Dale</figcaption>
+        </figure>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:ryanellisdale@gmail.com">
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/EmailSymbol.png" />
+          <figcaption>RyanEllisDale@Gmail.Com</figcaption>
+        </figure>
+      </a>
+
+      <!-- Location -->
+      <div>
+        <figure>
+          <img class="Tag BigImgTag" src="Assets/Contact/LocationSymbol.png" />
+          <figcaption>United Kingdom</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Thank You -->
+    <em>Thank you for visiting my portfolio.</em>
+    <em>Hope to hear from you soon.</em>
+
+  </footer>
+
+
+</body>
+
 </html>
