@@ -44,6 +44,8 @@ html {
   --SurfaceA40: #717171;
   --SurfaceA50: #8b8b8b;
 
+  --SurfaceOppositeA0: #e6e6e6;
+
   /* Dark theme Tonal Surface colors */
   --SurfaceTonalA0: #2a232f;
   --SurfaceTonalA10: #3e3843;
@@ -53,12 +55,11 @@ html {
   --SurfaceTonalA50: #99959c;
 
   /* Spacing */
-  --MarginA0: 1.5em;
-  --MarginA10: 1em;
-  --MarginA20: 0.5em;
-  --PaddingA0: 1em;
-  --PaddingA10: 0.5em;
-  --PaddingA20: 0.25em;
+  --SpacingA0: 1.5em;
+  --SpacingA10: 1em;
+  --SpacingA20: 0.5em;
+  --SpacingA30: 0.25em;
+
   --FlexGapA0: 0.2rem;
   --FlexGapA10: 0.1rem;
   --FlexGapA20: 0.25rem;
@@ -72,11 +73,15 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
+
 /* Scoll Bar */
 
 /* width */
 ::-webkit-scrollbar {
-  width: var(--MarginA20);
+  width: var(--SpacingA20);
 }
 
 /* Track */
@@ -107,12 +112,19 @@ body {
   font-family: Consolas, Monaco, 'JetBrains Mono', monospace;
   font-size: var(--FontSizePrimary);
   color: var(--Light);
+
+  background-image: url("Assets/BlackBackgroundMaster.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+  /* background-color: red; */
+  
   background-color: var(--SurfaceA0);
 
 }
 
 .ProjectBody {
-  padding: var(--MarginA0);
+  padding: var(--SpacingA0);
   width: 100%;
 }
 
@@ -127,13 +139,14 @@ main {
   height: 100%;
 
   /* Spacing */
-  padding-right: var(--MarginA10);
-  margin-left: var(--MarginA10);
+  padding-right: var(--SpacingA10);
+  margin-left: var(--SpacingA10);
 }
 
 #BodyWrap {
   display: flex;
   flex-direction: row;
+    /* padding-top: 20px; */
 }
 
 /* Allignment: */
@@ -154,7 +167,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--MarginA20);
+  gap: var(--SpacingA20);
 }
 
 .FlexColumn {
@@ -176,7 +189,7 @@ main {
 }
 
 .MarginGapBottom {
-  margin-bottom: var(--MarginA20);
+  margin-bottom: var(--SpacingA20);
 }
 
 /* Tool Classes */
@@ -212,7 +225,7 @@ main {
   bottom: 125%;
 
   /* Spacing */
-  padding: var(--PaddingA20) var(--PaddingA10);
+  padding: var(--SpacingA30) var(--SpacingA20);
 
   /* Effects */
   opacity: 0;
@@ -250,7 +263,7 @@ button {
   /* Dimensions */
   width: fit-content;
   box-sizing: content-box;
-  padding: var(--PaddingA10) var(--PaddingA10) var(--PaddingA10) var(--PaddingA10);
+  padding: var(--SpacingA20) var(--SpacingA20) var(--SpacingA20) var(--SpacingA20);
 
   /* Background */
   background-color: var(--SurfaceA20);
@@ -259,7 +272,7 @@ button {
   border-radius: 0.5em;
 
   /* Spacing */
-  margin-bottom: var(--MarginA20);
+  margin-bottom: var(--SpacingA20);
   color: var(--Light)
 }
 
@@ -294,8 +307,38 @@ button {
 header {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--MarginA10);
+  margin-bottom: var(--SpacingA10);
 }
+
+.Navigation
+{
+  background-image: 
+    url(Assets/NavigationHeaderBackgroundLeft.jpg),
+    url(Assets/NavigationHeaderBackgroundRight.jpg);
+  background-position: 
+    left top, 
+    right bottom;
+  background-size: 30%, 30%;
+  background-repeat: no-repeat;
+
+  background-color: black;
+
+  width: 100%;
+  height: 100px;
+
+  position: fixed;
+  z-index: 999;
+  
+  filter: drop-shadow(50px 50px 50px black);
+}
+
+
+.Navigation ul > li
+{
+  display: inline-block;
+}
+
+
 
 .NavLine {
   /* Dimensions */
@@ -318,11 +361,11 @@ nav {
   /* Dimensions */
   width: max-content;
   height: fit-content;
-  padding: var(--PaddingA0);
+  padding: var(--SpacingA10);
 
   /* Position */
   position: sticky;
-  top: var(--MarginA0);
+  top: var(--SpacingA0);
 
   /* Background */
   background-color: var(--SurfaceA20);
@@ -334,7 +377,7 @@ nav {
 }
 
 nav li {
-  margin: var(--MarginA20) 0;
+  margin: var(--SpacingA20) 0;
 }
 
 nav li:hover {
@@ -353,7 +396,7 @@ nav li:hover {
 /* Figure Class with margin and wide text */
 .Thumbnail {
   /* Spacing */
-  margin-bottom: var(--MarginA20);
+  margin-bottom: var(--SpacingA20);
 }
 
 .Thumbnail img {
@@ -364,7 +407,7 @@ nav li:hover {
 .SnapShot figcaption {
   /* Dimensions */
   width: 100%;
-  padding: var(--PaddingA10);
+  padding: var(--SpacingA20);
 
   /* Background */
   background-color: var(--SurfaceA10);
@@ -378,14 +421,14 @@ nav li:hover {
 .Stamp,
 .Pannel {
   /* Dimensions */
-  padding: var(--PaddingA10);
+  padding: var(--SpacingA20);
 
   /* Display */
   border-radius: 0.5em;
   z-index: 1;
 
   /* Spacing */
-  margin-top: var(--MarginA20);
+  margin-top: var(--SpacingA20);
 
   /* Filter */
   box-shadow: 0 0 20px 1px var(--Dark);
@@ -439,12 +482,11 @@ nav li:hover {
 
 .Stamp img {
   width: 100%;
-  margin-bottom: var(--MarginA20);
+  margin-bottom: var(--SpacingA20);
 }
 
 .Book img {
   height: 400px;
-}
 }
 
 .Ex img {
@@ -469,7 +511,7 @@ nav li:hover {
   list-style: circle;
 
   /* Spacing */
-  margin: var(--MarginA10) 0 var(--MarginA10) 0;
+  margin: var(--SpacingA10) 0 var(--SpacingA10) 0;
 }
 
 .Pannel ul li {
@@ -477,7 +519,7 @@ nav li:hover {
   list-style: circle;
 
   /* Spacing */
-  margin-left: Calc(var(--MarginA0) + 14px);
+  margin-left: Calc(var(--SpacingA0) + 14px);
 }
 
 button:hover {
@@ -490,7 +532,7 @@ footer {
   /* Dimensions */
   width: 100%;
   height: fit-content;
-  padding: var(--PaddingA0) 0 3em 0;
+  padding: var(--SpacingA10) 0 var(--SpacingA0) 0;
 
   /* Display */
   text-align: center;
@@ -500,7 +542,7 @@ footer {
 
 footer q {
   width: 50%;
-  margin: var(--MarginA10) 0;
+  margin: var(--SpacingA10) 0;
 }
 
 /* Specifics: */
@@ -528,7 +570,7 @@ footer q {
 .CVTitle {
   display: flex;
   flex-direction: row;
-  gap: var(--MarginA20);
+  gap: var(--SpacingA20);
 }
 
 .CVDate {
@@ -538,6 +580,11 @@ footer q {
   margin-left: auto;
 }
 
+
+.JustifyCenter
+{
+  justify-content: center;
+}
 
 
 /* Media Formatting */
@@ -615,3 +662,130 @@ footer q {
     justify-content: center;
   }
 }
+
+form
+{
+  /* Dimensions */
+  width:340px;
+  min-height:440px;
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  position:relative;
+
+  /* Styling */
+  background-color: var(--SurfaceOppositeA0);
+  font-family:'Montserrat',sans-serif;
+  border-color: var(--SurfaceA20);
+  border-style: solid;
+  border-radius: 8px;
+
+  /* Spacing */
+  padding: var(--SpacingA0) var(--SpacingA10);
+  margin-bottom: var(--SpacingA0);
+
+  /* Filters */
+  box-shadow:0 0 40px -10px #000;
+}
+
+form > h2
+{
+  width:180px;
+
+  color:#78788c;
+
+  border-bottom: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #78788c;
+
+  margin-top: var(--SpacingA20);
+  padding-bottom:10px;
+}
+
+form > p:before
+{
+  content:attr(type);
+  display:block;
+  margin:28px 0 0;
+  font-size:14px;
+  color:#5a5a5a;
+}
+
+form > p
+{
+  text-align: left;
+}
+
+form > button
+{ 
+  padding:8px 12px;
+  margin:8px 0px 20px auto;
+  font-family:'Montserrat',sans-serif;
+  border:2px solid #78788c;
+  background:0;color:#5a5a6e;
+  cursor:pointer;
+  transition:all .3s;
+}
+
+form > button:hover
+{
+background:#78788c;color:#fff
+}
+
+input,
+textarea
+{
+  resize: none;
+  field-sizing: content;
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;
+  transition:all .3s;
+  border-bottom:2px solid #bebed2;
+}
+
+
+
+/* Debug */
+.DEBUG-TempContainer
+{
+  background-color: black;
+}
+
+.Number
+{
+  position:absolute;
+  bottom:-15px;
+  right:-40px;
+  background:#50505a;
+  color:#fff;
+  padding:16px 4px 16px 0;
+  border-radius:6px;
+  font-size:13px;
+  box-shadow:10px 10px 40px -14px #000;
+}
+
+.Number > span
+{
+  margin:0 5px 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

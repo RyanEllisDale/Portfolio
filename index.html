@@ -4,28 +4,48 @@
 <!-- Head -->
 
 <head>
-  <!-- Configuration -->
-  <meta charset="utf-8" />
-  <metal http-equiv="refresh" content="30" />
+  <!-- Meta Data -->
+  <meta charset="UTF-8" />
+  <meta name="Author" content="Ryan-Ellis Dale RyanEllisDale@protonmail.com" />
+  <meta name="description" content="Ryan-Ellis Dale Games Programmer Portfolio - Unity and Unreal" />
+  <meta name="keywords" content="Unity, Unreal, C++, C#, Games Programmer, Programmer, Games, Portfolio, Ryan Dale, Ryan-Ellis Dale" />
+  <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Page Information -->
-  <meta name="author" content="Ryan Ellis Dale, RyanEllisDale@gmail.com" />
-  <meta name="description" content="Hello Word! I'm Ryan, A games programmer from the UK. I’m committed to continuously improving my skills and contributing to innovative projects." />
-  <meta name="keywords" content="Portfolio, Games, Programming, Website, Developer, Professional, CV, Resume, C++, Js" />
-  <title>Ryan-Ellis Dale Portfolio</title>
-
-  <!-- Linker -->
+  <metal http-equiv="refresh" content="30" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ryan-Ellis Dale Portfolio" />
+  <meta property="og:description" content="Hello World : Here is my Portfolio" />
+  <meta property="og:url" content="https://ryanellisdale.github.io/Portfolio/" />
+  <meta property="og:type" content="website" />
+  <!-- Styling -->
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="theme-color" content="#F2F2F2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" />
+  <link rel="icon" href="Favicon.ico" />
+  <!-- Page Data -->
+  <title>Ryan Dale Games Portfolio</title>
+  <link rel="canonical" href="https://ryanellisdale.github.io/Portfolio/" />
   <script src="java.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<!-- Body / Main -->
 
+
+<!-- Body / Main -->
 <body>
 
+
+    
+
+
+
+
+
   <div id="BodyWrap">
+
     <!-- Navigation -->
     <div class="NavLine">
       <nav>
@@ -36,11 +56,10 @@
           <li class="Hover" onclick="Scroll('CV')"><strong>Curriculum Vitae CV</strong></li>
           <li class="Hover" onclick="Scroll('ExtraCurricular')"><strong>Extra-Curricular</strong></li>
           <li class="Hover" onclick="Scroll('GameJams')"><strong>Game Jams</strong></li>
-          <li class="Hover" onclick="Scroll('Reading')"><strong>Reading</strong></li>
           <li class="Hover" onclick="Scroll('Contact')"><strong>Contact</strong></li>
         </ul>
       </nav>
-    </div>
+    </div> <!--  Navigation -->
 
     <!-- Main -->
     <main>
@@ -687,92 +706,64 @@
         </div>
       </header>
 
-      <!-- Reading -->
-      <header id="Reading">
-        <h2>Reading:</h2>
+
+      <section id="Contact">
+        <h2>Contact:</h2>
+
+        <!-- Wrap -->
+        <div class="FlexRow JustifyCenter">
+          <!-- Form -->
+          <form method="POST" action="https://formsubmit.co/RyanEllisDale@protonmail.com">
+            <h2>Contact Me</h2>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_autoresponse" value="Auto Reply: Ryan-Ellis Dale, Thank you so much for contacting me, I will be with you as soon as I can be.">
+            <input type="hidden" name="_subject" value="Contact Form Submission">
+
+            <p type="Name:"><input name="name" type="text" placeholder="Enter Name" required /></p>
+            <p type="Email:"><input name="email" type="email" placeholder="Enter email" required /></p>
+            <p type="Message:"><textarea name="message" placeholder="Enter message" required></textarea></p>
+            <button type="submit">Send</button>
+            <div class="Number">
+              <span class="fa fa-phone">+44 (0)7305409734</span>
+              <span class="fa fa-envelope-o">RyanEllisDale@protonmail.com</span>
+            </div> <!-- Number -->
+          </form> <!-- Form -->
+
+          <!-- Links -->
+          <div class="FlexColumn">
+
+            <a href="https://github.com/RyanEllisDale" target="_blank">
+              <div class="Tooltip">
+                <img class="Tag BigImgTag" src="Assets/Contact/GithubSymbol.png" />
+                <span>Ryan-Ellis Dale GitHub</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ryan-ellis-dale-869859334/" target="_blank">
+              <div class="Tooltip">
+                <img class="Tag BigImgTag" src="Assets/Contact/LinkedInSymbol.png" />
+                <span>Ryan-Ellis Dale LinkedIn</span>
+              </div>
+            </a>
+
+          </div> <!-- Links -->
+          </div> <!-- Wrap -->
+      </section> <!-- Contact -->
 
 
-
-        <!-- Book Wrapper -->
-        <div class="FlexRow MediaCenter">
-
-          <!-- Game Programming Patterns -->
-          <a href="https://gameprogrammingpatterns.com/" target="_blank">
-            <figure class="Stamp Book">
-              <!-- Book -->
-              <img class="CoverImage" src="Assets/Reading/GameProgrammingPatterns.jpg" alt="Games Programming Patterns Robert Nystrom" />
-              <figcaption>
-                <div class="Tag">Finished</div>
-                <h3 class="TextHighlightPrimary">Game Programming Patterns</h3>
-                <h4>Robert Nystrom</h4>
-                <h4>2nd Novembet 2014</h4>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- Game Engine Architecture -->
-          <!-- Currently Reading -->
-          <figure class="Stamp Book">
-            <!-- Book -->
-            <img class="CoverImage" src="Assets/Reading/GameEngineArchitecture.jpg" alt="Games Engine Architecture Jason Gregory" />
-            <figcaption>
-              <div class="Tag">Currently Reading</div>
-              <h3 class="TextHighlightPrimary">Game Engine Architecture</h3>
-              <h4>Jason Gregory</h4>
-              <h4>15th June 2009</h4>
-            </figcaption>
-          </figure>
-
-        </div>
-
-      </header>
 
       <!-- Footer - Contact -->
-      <footer class="FlexColumn" id="Contact">
-
-
-        <h2>Contact:</h2>
-        <q class="TextHighlightPrimary">What are you so hesitant about? It’s your dream, isn’t it? It’s right in front of you, and you’re wavering? You gotta be reckless and take whatever you can</q>
-
-        <!-- Contacts -->
-        <div class="FlexRow MediaCenter MarginGapBottom">
-
-          <!-- Github -->
-          <a href="https://github.com/RyanEllisDale" target="_blank">
-            <figure>
-              <img class="Tag BigImgTag" src="Assets/Contact/GithubSymbol.png" />
-              <figcaption>Ryan Ellis Dale</figcaption>
-            </figure>
-          </a>
-
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/ryan-ellis-dale-869859334/" target="_blank">
-            <figure><img class="Tag BigImgTag" src="Assets/Contact/LinkedInSymbol.png" />
-              <figcaption>Ryan Ellis Dale</figcaption>
-            </figure>
-          </a>
-
-          <!-- Email -->
-          <a href="mailto:ryanellisdale@gmail.com">
-            <figure>
-              <img class="Tag BigImgTag" src="Assets/Contact/EmailSymbol.png" />
-              <figcaption>RyanEllisDale@Gmail.Com</figcaption>
-            </figure>
-          </a>
-
-          <!-- Location -->
-          <div>
-            <figure>
-              <img class="Tag BigImgTag" src="Assets/Contact/LocationSymbol.png" />
-              <figcaption>United Kingdom</figcaption>
-            </figure>
-          </div>
-        </div>
+      <footer>
 
         <!-- Thank You -->
+        <q class="TextHighlightPrimary">What are you so hesitant about? It’s your dream, isn’t it? It’s right in front of you, and you’re wavering? You gotta be reckless and take whatever you can</q>
+        <br>
+        <br>
         <em>Thank you for visiting my portfolio.</em>
+        <br>
         <em>Hope to hear from you soon.</em>
-
+        
       </footer>
     </main>
   </div>
