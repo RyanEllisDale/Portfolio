@@ -493,7 +493,11 @@ nav li:hover {
   height: 100px;
 }
 
-
+section
+{
+  margin-bottom: var(--SpacingA20);
+  margin-top: var(--SpacingA20);
+}
 
 .Pannel {
   /* Dimensions */
@@ -545,6 +549,9 @@ footer q {
   margin: var(--SpacingA10) 0;
 }
 
+
+
+
 /* Specifics: */
 /* Styles created for one off instances */
 /* Usually Individual Section Stuff */
@@ -585,6 +592,47 @@ footer q {
 {
   justify-content: center;
 }
+
+
+  .ConstructionTape
+  {
+    width: 100%;
+  }
+
+  .ScrollContainer
+  {
+    display: flex;
+    width: 200%; 
+    animation: scroll-loop 15s linear infinite;
+    overflow: hidden;
+  }
+
+  .ScrollingText
+  {
+    flex-shrink: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* CRITICAL: LETTER WRAPPING */
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  @keyframes scroll-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+
+  .ScrollContainer:hover {
+    animation-play-state: paused;
+  }
+
+
 
 
 /* Media Formatting */
@@ -776,7 +824,23 @@ textarea
 }
 
 
+/* Effects */
+.Glass
+{
+  /* background: rgba(255, 255, 255, 0.2); */
 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: linear-gradient(
+  to bottom,
+  rgba(30,87,153,0.2) 0%,
+  rgba(41,137,216,0.2) 50%,
+  rgba(32,124,202,0.2) 51%,
+  rgba(125,185,232,0.2) 100% );
+}
 
 
 
