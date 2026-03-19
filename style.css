@@ -597,29 +597,37 @@ footer q {
   .ConstructionTape
   {
     width: 100%;
+    font-size: 3rem;
   }
 
   .ScrollContainer
   {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ScrollTrack
+  {
     display: flex;
     width: 200%; 
     animation: scroll-loop 15s linear infinite;
-    overflow: hidden;
+  }
+
+    .ScrollTrack:hover {
+    animation-play-state: paused;
   }
 
   .ScrollingText
   {
     flex-shrink: 0;
     padding: 20px;
-    box-sizing: border-box;
 
     /* CRITICAL: LETTER WRAPPING */
     word-break: break-all;
     overflow-wrap: anywhere;
     white-space: normal;
+
     
-    font-size: 3rem;
-    line-height: 1;
   }
 
   @keyframes scroll-loop {
@@ -627,10 +635,6 @@ footer q {
     100% { transform: translateX(-50%); }
   }
 
-
-  .ScrollContainer:hover {
-    animation-play-state: paused;
-  }
 
 
 
@@ -685,6 +689,8 @@ footer q {
   }
 
 }
+
+
 
 @media only screen and (max-width: 809px) {
   .Showcase {
@@ -842,14 +848,28 @@ textarea
   rgba(125,185,232,0.2) 100% );
 }
 
+.LegibleText
+{
+  font-family: Consolas;
+  line-height: 1;
+}
+
+.FlexRow img {
+  flex-shrink: 0;  /* prevents it from shrinking */
+  flex-grow: 0;    /* prevents it from growing */
+}
 
 
 
+.TNail
+{
+  max-width: 640px;
+  max-height: 360px;
+  width: 90%;
+  margin-bottom: var(--SpacingA10);
+}
 
-
-
-
-
-
-
-
+.mainIndent
+{
+  margin: 0 var(--SpacingA0);
+}
