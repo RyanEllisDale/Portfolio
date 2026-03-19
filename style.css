@@ -188,6 +188,11 @@ main {
   margin-left: auto;
 }
 
+.MarginRightAuto 
+{
+  margin-right: auto;
+}
+
 .MarginGapBottom {
   margin-bottom: var(--SpacingA20);
 }
@@ -863,8 +868,8 @@ textarea
 
 .TNail
 {
-  max-width: 640px;
-  max-height: 360px;
+  max-width: 358px;
+  max-height: 350px;
   width: 90%;
   margin-bottom: var(--SpacingA10);
 }
@@ -872,4 +877,9 @@ textarea
 .mainIndent
 {
   margin: 0 var(--SpacingA0);
+}
+
+.ViewImage
+{
+  width: 80%;
 }
