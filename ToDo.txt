@@ -1,13 +1,13 @@
-Construction Base
+Construction Base |
 Portfolio
-	Meta I
-	Skills
-	Engine
+	Meta |
+	Skills |
+	Engine |
 	Projects
-	view the online version bug ~
+	view the online version bug |
 	New Pages
 	Fixed Header Experiment 
-	background i~
+	background i |
 	Project Page Change
 	Contact I
 	Center Look
