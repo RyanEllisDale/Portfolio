@@ -605,40 +605,6 @@ footer q {
     font-size: 3rem;
   }
 
-  .ScrollContainer
-  {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .ScrollTrack
-  {
-    display: flex;
-    width: 200%; 
-    animation: scroll-loop 15s linear infinite;
-  }
-
-    .ScrollTrack:hover {
-    animation-play-state: paused;
-  }
-
-  .ScrollingText
-  {
-    flex-shrink: 0;
-    padding: 20px;
-
-    /* CRITICAL: LETTER WRAPPING */
-    word-break: break-all;
-    overflow-wrap: anywhere;
-    white-space: normal;
-
-    
-  }
-
-  @keyframes scroll-loop {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
 
 
 
