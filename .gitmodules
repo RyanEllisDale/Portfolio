@@ -1,0 +1,3 @@
+[submodule "CSSEffects"]
+	path = CSSEffects
+	url = https://github.com/RyanEllisDale/CSSEffects.git
