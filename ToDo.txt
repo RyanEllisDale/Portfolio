@@ -1,5 +1,12 @@
 Construction Base |
 Portfolio
+	Fix the footer for all pages
+	Thank you page for contact ( with re-direct )
+	Package Template Page
+	New Visage Button
+	Rest of the project pages.
+	Return to main page button.
+	Fix Scroll
 	Meta |
 	Skills |
 	Engine |
