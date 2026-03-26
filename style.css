@@ -153,38 +153,18 @@ main {
 /* Inline */
 /* Flex */
 
-.InlineBlockWrapper {
-  width: fit-content;
-}
-
-.InlineBlockWrapper > * {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.FlexRow {
-  /* Display */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.Gap
+{
   gap: var(--SpacingA20);
 }
 
-.FlexColumn {
-  /* Display */
-  display: flex;
-  flex-direction: column;
-}
 
-.Wrap {
-  flex-wrap: wrap;
-}
 
-.AlignCenter {
-  align-items: center;
-}
 
-.MarginLeftAuto {
+
+
+.MarginLeftAuto 
+{
   margin-left: auto;
 }
 
@@ -193,7 +173,8 @@ main {
   margin-right: auto;
 }
 
-.MarginGapBottom {
+.MarginGapBottom 
+{
   margin-bottom: var(--SpacingA20);
 }
 
@@ -593,10 +574,7 @@ footer q {
 }
 
 
-.JustifyCenter
-{
-  justify-content: center;
-}
+
 
 
   .ConstructionTape
@@ -810,7 +788,8 @@ textarea
   line-height: 1;
 }
 
-.FlexRow img {
+.FlexRow img 
+{
   flex-shrink: 0;  /* prevents it from shrinking */
   flex-grow: 0;    /* prevents it from growing */
 }
