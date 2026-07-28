@@ -1,6 +1,0 @@
-[submodule "CSSEffects"]
-	path = CSSEffects
-	url = https://github.com/RyanEllisDale/CSSEffects.git
-[submodule "CSSDisplays"]
-	path = CSSDisplays
-	url = https://github.com/RyanEllisDale/CSSDisplays.git

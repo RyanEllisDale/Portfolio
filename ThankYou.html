@@ -1,59 +1,110 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-
-<!-- Head -->
 <head>
-  <!-- Meta Data -->
-  <meta charset="UTF-8" />
-  <meta name="Author" content="Ryan-Ellis Dale RyanEllisDale@protonmail.com" />
-  <meta name="description" content="Ryan-Ellis Dale Games Programmer Portfolio - Unity and Unreal" />
-  <meta name="keywords" content="Unity, Unreal, C++, C#, Games Programmer, Programmer, Games, Portfolio, Ryan Dale, Ryan-Ellis Dale" />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <metal http-equiv="refresh" content="30" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ryan-Ellis Dale Portfolio" />
-  <meta property="og:description" content="Hello World : Here is my Portfolio" />
-  <meta property="og:url" content="https://ryanellisdale.github.io/Portfolio/" />
-  <meta property="og:type" content="website" />
-  <!-- Styling -->
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="CSSEffects/effects.css" />
-  <link rel="stylesheet" type="text/css" href="CSSDisplays/displays.css" />
+<!-- Scripting -->
+<script>
+	if (localStorage.getItem("darkMode") === "enabled") {
+	document.documentElement.classList.add("dark");
+	}
+</script>
+<!-- Meta Data -->
+<meta charset="UTF-8" />
+<meta name="Author" content="Ryan-Ellis Dale" />
+<meta name="description" content="Ryan-Ellis Dale Games Programmer Portfolio - Unity and Unreal" />
+<meta name="keywords" content="Unity, Unreal, C++, C#, Games Programmer, Programmer, Games, Portfolio, Ryan Dale, Ryan-Ellis Dale" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Open Graph -->
+<meta property="og:title" content="Ryan-Ellis Dale Portfolio" />
+<meta property="og:description" content="Hello World : Here is my Portfolio" />
+<meta property="og:url" content="https://ryanellisdale.github.io/Portfolio/" />
+<meta property="og:type" content="website" />
+<!-- Styling -->
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta name="theme-color" content="#2596be" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" />
+<link rel="icon" href="Favicon.ico" />
+<!-- Page Data -->
+<title>Ryan Dale Games Portfolio</title>
+<link rel="canonical" href="https://ryanellisdale.github.io/Portfolio/" />
+<script src="darkmode.js" defer></script>
+<script src="script.js" defer></script>
 
-  <meta name="theme-color" content="#F2F2F2" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" />
-  
-  <link rel="icon" href="Favicon.ico" />
-  <!-- Page Data -->
-  <title>Thank You !</title>
-  <link rel="canonical" href="https://ryanellisdale.github.io/Portfolio/" />
-  <script src="java.js" defer></script>
 </head>
 
-<!-- Body / Main -->
-<body>
-    <div class="FlexColumn">
-    <main class="AlignCenter JustifyCenter">
+<body style="display: flex; justify-content: center; align-items: center;">
 
-        <h1 class="TextHighlightPrimary">Thank You !</h1>
-        <p>&nbsp</p>
-        <p>Your email has been recieved, I will get back to you as soon as I can.</p>
-        <p>I appreciate your reaching out.</p>
-        <p>&nbsp</p>
-        <span>Sincerely : <span class="TextHighlightPrimary">Ryan</span></span>
-        <p>&nbsp</p>
 
-        <a href="https://ryanellisdale.github.io/Portfolio/">
-            <button>Return To Portfolio</button>
-        </a>
 
-    </main>
-    </div>
+	<!-- Hello World -->
+	<!-- <header>
+
+		<div class="PageTitleText">> Hello World</div>
+		<span><small><cite>print("Hello World");</cite>&nbsp;<strong>by Ryan-Ellis Dale</strong>&nbsp;<i>2026</i></small></span>
+		<br/><br/>
+		<p><strong>Welcome</strong> to my portfolio</p>
+		<p>I am a programmer interested in Games Development and Software Engineering.<br/>Please check out my projects below:</p>
+
+	</header> -->
+
+
+	<!-- <main>
+
+		
+
+	</main> -->
+
+
+	<div style="background-color: var(--Main-Background-Colour); border-radius: var(--Spacing2); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); padding: var(--Spacing1); width: 90%; ;text-align: center; max-width: 500px;">
+		<h1 style="margin-bottom: var(--Spacing2);">Thank You !</h1>
+		<p style="margin-bottom: var(--Spacing1);">Your email has been recieved, I will get back to you as soon as I can.I appreciate your reaching out.</p>
+		<p style="margin-bottom: var(--Spacing1);">Sincerely: Ryan</p>
+
+		<!-- Return -->
+		<a href="Index.html">
+			<button class="SourceLink">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 472.615 472.615" xml:space="preserve">
+					<g>
+						<g>
+							<path d="M167.158,117.315l-0.001-77.375L0,193.619l167.157,153.679v-68.555c200.338,0.004,299.435,153.932,299.435,153.932    c3.951-19.967,6.023-40.609,6.023-61.736C472.615,196.295,341.8,117.315,167.158,117.315z"/>
+						</g>
+					</g>
+				</svg>
+				<span>Return</span>
+			</button>
+		</a>
+
+
+	</div>
+
+
+
+
+
+
+
+
+</div>
+
+		
+
+		
+<!-- Site Wrapper -->
+</div>
+	
+	
+	
+
+
+<!-- End -->
+ <script>
+  requestAnimationFrame(() => {
+    document.documentElement.classList.add("ready");
+  });
+</script>
+
 </body>
 </html>

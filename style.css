@@ -1,831 +1,817 @@
-/* Universal */
-* {
-  /* Position */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  /* Design */
-  list-style: none;
-  text-decoration: none;
+@property --Base-Background-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #fafafa;
 }
 
-/* Anchor */
-a {
-  /* Link Decoration */
-  text-decoration: none;
-  color: var(--Light);
+@property --Main-Background-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #e4e5f1;
 }
 
-.Hover {
-  /* Cursor Decoration */
-  cursor: pointer;
+@property --Opposite-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
 }
 
-/* Global Variables */
-html {
-  /* Base colors */
-  --Dark: #000000;
-  --Light: #ffffff;
+@property --Text-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #484b6a;
+}
 
-  /* Dark theme Primary colors */
-  --PrimaryA0: #9770b6;
-  --PrimaryA10: #a37fbe;
-  --PrimaryA20: #ae8ec6;
-  --PrimaryA30: #ba9ece;
-  --PrimaryA40: #c5aed6;
-  --PrimaryA50: #d1bedf;
+@property --Accent-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #747fe0;
+}
 
-  /* Dark theme Surface colors */
-  --SurfaceA0: #121212;
-  --SurfaceA10: #282828;
-  --SurfaceA20: #3f3f3f;
-  --SurfaceA30: #575757;
-  --SurfaceA40: #717171;
-  --SurfaceA50: #8b8b8b;
+@property --Link-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #2E6F40;
+}
 
-  --SurfaceOppositeA0: #e6e6e6;
-
-  /* Dark theme Tonal Surface colors */
-  --SurfaceTonalA0: #2a232f;
-  --SurfaceTonalA10: #3e3843;
-  --SurfaceTonalA20: #544d58;
-  --SurfaceTonalA30: #6a646e;
-  --SurfaceTonalA40: #817c84;
-  --SurfaceTonalA50: #99959c;
-
-  /* Spacing */
-  --SpacingA0: 1.5em;
-  --SpacingA10: 1em;
-  --SpacingA20: 0.5em;
-  --SpacingA30: 0.25em;
-
-  --FlexGapA0: 0.2rem;
-  --FlexGapA10: 0.1rem;
-  --FlexGapA20: 0.25rem;
-
-  /* Text */
-  --FontSizePrimary: 1rem;
-  --FontSizeTitle: 6rem;
-  --FontSizeFinePrint: 0.7rem;
-
-  /* Scrolling */
-  scroll-behavior: smooth;
+@property --Box-Shadow-Colour {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(50, 50, 93, 0.1);
 }
 
 
-
-
-
-/* Scoll Bar */
-
-/* width */
-::-webkit-scrollbar {
-  width: var(--SpacingA20);
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--SurfaceA10);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--PrimaryA0);
-}
-
-
-/* Body Classes */
-/* Body */
-/* Main */
-
-
-body {
-  /* Text */
-  /* Uses Built In windows Consolas font by default, 
-        falls back onto jetbrains mono font */
-  font-family: Consolas, Monaco, 'JetBrains Mono', monospace;
-  font-size: var(--FontSizePrimary);
-  color: var(--Light);
-
-  background-image: url("Assets/BlackBackgroundMaster.jpg");
-  background-repeat: repeat;
-  background-position: center;
-  background-size: contain;
-  /* background-color: red; */
-  
-  background-color: var(--SurfaceA0);
-
-}
-
-.ProjectBody {
-  padding: var(--SpacingA0);
-  width: 100%;
-}
-
-main {
-  /* Display */
-  display: flex;
-  flex-direction: column;
-
-  /* Dimensions */
-  min-height: 100vh;
-  height: 100%;
-
-  /* Spacing */
-  padding-right: var(--SpacingA10);
-  margin-left: var(--SpacingA10);
-}
-
-#BodyWrap {
-  display: flex;
-  flex-direction: row;
-    /* padding-top: 20px; */
-}
-
-/* Alignment : */
-.Gap
+/* Root Start */
+/* Defining States and Variables */
+:root
 {
-  gap: var(--SpacingA20);
+    /* Dimensions */
+    --Max-Content-Width : 1000px;
+    --Mobile-Threshold: 420px;
+    --Tablet-Threshold: 768px;
+    --Min-Width: 320px;
+
+    /* Colours : */
+    /* Assumes Light Mode: */ /* https://www.color-hex.com/color-palette/106748 */
+    --Base-Background-Colour : #fafafa;
+    --Main-Background-Colour : #e4e5f1;
+    --Opposite-Colour: #000000;
+    --Text-Colour : #484b6a;
+    --Accent-Colour: #747fe0;
+    --Link-Colour: #2E6F40; 
+    --Box-Shadow-Colour: rgba(50,50,93,.1); 
+
+    /* Pretty Blue - 747fe0 */
+
+    /* Text : */
+    --Font1 : 'Manrope', sans-serif;
+
+    /* Spacing */
+    --Spacing1: 16px;
+    --Spacing2: 10px;
+
+    /* Reducing the text size for all base text elements (span / p / etc) */
+    /* Works on Cards, Pannels, and Context Boxes - Anything that doesn't overwrite size */
+    @media (max-width: 728px)
+    {
+        font-size: 0.8em;
+    }
 }
 
-.MarginLeftAuto 
+
+
+
+/* Dark Mode Styling */
+
+/* TODO- ADD BACK IN AT END */
+
+/* @media (prefers-color-scheme: dark)
 {
-  margin-left: auto;
-}
+    :root 
+    {
+        --Base-Background-Colour : #1a1a1a;
+        --Main-Background-Colour : #2d2d2d;
+        --Text-Colour : #FFFFFF;
+        --Link-Colour: #4fb46c; 
+        --Opposite-Colour: #FFFFFF;
+        --Box-Shadow-Colour: rgba(100,100,100,.1);
+    }
+} */
 
-.MarginRightAuto 
+/* Reset Browser Defaults */
+*
 {
-  margin-right: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
 }
 
-.MarginGapBottom 
+/* Contains absolute default backup values for the site */
+/* Only built-in "web-safe" values allowed */
+html
 {
-  margin-bottom: var(--SpacingA20);
+    transition: none !important;
+
+    /* Absolute Defaults: */
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #fafafa;
 }
 
-/* Tool Classes */
-/* Tooltips */
-/* Tags */
-
-.Tooltip {
-
-  position: relative;
-  display: inline-block;
-}
-
-.Tooltip span {
-  /* Display */
-  visibility: hidden;
-  width: 130px;
-
-  /* Background */
-  background-color: var(--SurfaceA20);
-
-  /* Text */
-  color: var(--Light);
-  text-align: center;
-
-  /* Border */
-  border-radius: 0.5em;
-
-  /* Position */
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  margin-left: -65px;
-  bottom: 125%;
-
-  /* Spacing */
-  padding: var(--SpacingA30) var(--SpacingA20);
-
-  /* Effects */
-  opacity: 0;
-  transition: opacity 0.3s;
-  box-shadow: 0px 0px 10px 2px var(--Dark);
-
-}
-
-.Tooltip:hover span {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Tooltip arrow */
-.Tooltip span::after {
-  /* Shape */
-  content: "";
-  border-style: solid;
-  border-color: var(--SurfaceA20) transparent transparent transparent;
-
-  /* Position */
-  position: absolute;
-  top: 100%;
-  left: 50%;
-
-  /* Spacing */
-  margin-left: -5px;
-  border-width: 5px;
-}
-
-
-.Tag,
-button {
-  /* Dimensions */
-  width: fit-content;
-  box-sizing: content-box;
-  padding: var(--SpacingA20) var(--SpacingA20) var(--SpacingA20) var(--SpacingA20);
-
-  /* Background */
-  background-color: var(--SurfaceA20);
-
-  /* Border */
-  border-radius: 0.5em;
-
-  /* Spacing */
-  margin-bottom: var(--SpacingA20);
-  color: var(--Light)
-}
-
-.SmallImgTag {
-  width: 3rem;
-  height: 3rem;
-}
-
-.BigImgTag {
-  width: 6rem;
-  height: 6rem;
-}
-
-/* Text Configs */
-.TextHighlightPrimary {
-  color: var(--PrimaryA0);
-}
-
-.TextFinePrint {
-  color: var(--SurfaceA40);
-  font-size: var(--FontSizeFinePrint);
-}
-
-.FitContent {
-  width: fit-content;
-}
-
-
-/* Header Elements */
-/* Nav */
-/* Header */
-header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: var(--SpacingA10);
-}
-
-.Navigation
+html.ready, html.ready * 
 {
-  background-image: 
-    url(Assets/NavigationHeaderBackgroundLeft.jpg),
-    url(Assets/NavigationHeaderBackgroundRight.jpg);
-  background-position: 
-    left top, 
-    right bottom;
-  background-size: 30%, 30%;
-  background-repeat: no-repeat;
+      transition: 
+    --Base-Background-Colour 0.4s ease,
+    --Main-Background-Colour 0.1s ease,
+    --Opposite-Colour 0.1s ease,
+    --Text-Colour 0.4s ease,
+    --Accent-Colour 0.4s ease,
+    --Link-Colour 0.4s ease,
+    --Box-Shadow-Colour 0.4s ease;
 
-  background-color: black;
-
-  width: 100%;
-  height: 100px;
-
-  position: fixed;
-  z-index: 999;
-  
-  filter: drop-shadow(50px 50px 50px black);
 }
 
+html.dark {
+  --Base-Background-Colour: #1a1a1a;
+  --Main-Background-Colour: #2d2d2d;
+  --Opposite-Colour: #FFFFFF;
+  --Text-Colour: #FFFFFF;
+  --Link-Colour: #4fb46c;
+  --Box-Shadow-Colour: rgba(100,100,100,.1);
+}
 
-.Navigation ul > li
+/* html.ready {
+  transition: 
+    --Base-Background-Colour 0.4s ease,
+    --Main-Background-Colour 0.4s ease,
+    --Opposite-Colour 0.4s ease,
+    --Text-Colour 0.4s ease,
+    --Link-Colour 0.4s ease,
+    --Box-Shadow-Colour 0.4s ease;
+} */
+
+
+/* SECTION FORMATTING */
+
+/* Sets the default text for the portfolio */
+body 
 {
-  display: inline-block;
+    min-height: 100vh; /* Makes body fill up screen */
+    padding: var(--Spacing1) 0; /* Vertical distance between site-wrapper and body */
+
+    /* Variable Styled Defaults */
+    font-family: var(--Font1);
+    color: var(--Text-Colour);
+    background-color: var(--Base-Background-Colour);
 }
 
-
-
-.NavLine {
-  /* Dimensions */
-  min-width: fit-content;
-
-  /* Background */
-  background-color: var(--SurfaceA10);
-
-  /* Position */
-  z-index: 5;
-  position: relative;
-
-  /* Border */
-  border-right-style: solid;
-  border-right-color: var(--Dark);
-  border-right-width: 1px;
-}
-
-nav {
-  /* Dimensions */
-  width: max-content;
-  height: fit-content;
-  padding: var(--SpacingA10);
-
-  /* Position */
-  position: sticky;
-  top: var(--SpacingA0);
-
-  /* Background */
-  background-color: var(--SurfaceA20);
-
-  /* Border */
-  border-style: solid none;
-  border-width: 1px;
-  border-color: var(--Dark);
-}
-
-nav li {
-  margin: var(--SpacingA20) 0;
-}
-
-nav li:hover {
-  color: var(--PrimaryA0);
-}
-
-/* General Page Elements */
-
-/* Main Image Class, use for images for thumbnails, stamps and cards */
-.CoverImage {
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.5em;
-}
-
-/* Figure Class with margin and wide text */
-.Thumbnail {
-  /* Spacing */
-  margin-bottom: var(--SpacingA20);
-}
-
-.Thumbnail img {
-  width: 100%;
-}
-
-.Thumbnail figcaption,
-.SnapShot figcaption {
-  /* Dimensions */
-  width: 100%;
-  padding: var(--SpacingA20);
-
-  /* Background */
-  background-color: var(--SurfaceA10);
-
-  /* Text Align */
-  text-align: center;
-}
-
-.Showcase,
-.Card,
-.Stamp,
-.Pannel {
-  /* Dimensions */
-  padding: var(--SpacingA20);
-
-  /* Display */
-  border-radius: 0.5em;
-  z-index: 1;
-
-  /* Spacing */
-  margin-top: var(--SpacingA20);
-
-  /* Filter */
-  box-shadow: 0 0 20px 1px var(--Dark);
-}
-
-.ProjectPannel {
-  max-width: 916px;
-}
-
-.Showcase {
-  /* Dimensions */
-  width: 380px;
-  min-height: fit-content;
-  height: 568px;
-
-  /* Display */
-  background-color: var(--SurfaceA0);
-  border: solid 0.2em var(--SurfaceA20);
-}
-
-.Showcase .Thumbnail img {
-  height: 300px;
-}
-
-.SnapShot img,
-.SnapShot video {
-  width: 300px;
-  height: 300px;
-}
-
-.Card {
-  width: 320px;
-
-  /* Display */
-  background-color: var(--SurfaceA0);
-  border: solid 0.2em var(--SurfaceA20);
-}
-
-.Card .Thumbnail img {
-  height: 100px;
-}
-
-.Stamp {
-  /* Dimensions */
-  width: 320px;
-  height: max-content;
-
-  /* Display */
-  background-color: var(--SurfaceA10);
-}
-
-.Stamp img {
-  width: 100%;
-  margin-bottom: var(--SpacingA20);
-}
-
-.Book img {
-  height: 400px;
-}
-
-.Ex img {
-  height: 100px;
-}
-
-section
+/* Sit Wrapper, keeps content to max-width design */
+/* Accounts for responsive changing and gutters */
+.site-wrapper
 {
-  margin-bottom: var(--SpacingA20);
-  margin-top: var(--SpacingA20);
-}
-
-.Pannel {
-  /* Dimensions */
-  width: 100%;
-  height: fit-content;
-
-  /* Display */
-  background-color: var(--SurfaceA10);
-  display: flex;
-  flex-direction: column;
-}
-
-.Pannel ul {
-  /* List Styling */
-  list-style: circle;
-
-  /* Spacing */
-  margin: var(--SpacingA10) 0 var(--SpacingA10) 0;
-}
-
-.Pannel ul li {
-  /* List Syling */
-  list-style: circle;
-
-  /* Spacing */
-  margin-left: Calc(var(--SpacingA0) + 14px);
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-/* Contact */
-/* Footer */
-footer {
-  /* Dimensions */
-  width: 100%;
-  height: fit-content;
-  padding: var(--SpacingA10) 0 var(--SpacingA0) 0;
-
-  /* Display */
-  text-align: center;
-  align-items: center;
-  border-top: solid 4px var(--PrimaryA0);
-}
-
-footer q {
-  width: 50%;
-  margin: var(--SpacingA10) 0;
-}
-
-
-
-
-/* Specifics: */
-/* Styles created for one off instances */
-/* Usually Individual Section Stuff */
-
-#HelloWorld {
-  font-size: var(--FontSizeTitle);
-}
-
-#CVDownloadButton {
-
-  /* Position */
-  position: relative;
-
-  /* Spacing */
-  margin-left: auto;
-}
-
-#CVDownloadButton .Tooltip span {
-  left: 0%;
-}
-
-
-.CVTitle {
-  display: flex;
-  flex-direction: row;
-  gap: var(--SpacingA20);
-}
-
-.CVDate {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-left: auto;
-}
-
-
-
-
-
-  .ConstructionTape
-  {
     width: 100%;
-    font-size: 3rem;
-  }
+    max-width: var(--Max-Content-Width);
+    padding: 0 var(--Spacing1); 
+    margin: 0 auto;
 
-.GithubButton
+    @media (max-width: 430px)
+    {
+        padding: 0;
+        margin: 0;
+    }
+} 
+
+/* Content formatting and colouring */
+/* Centres everything to the middle of the screen for my universal design */
+main,
+.MainDupe
 {
-  width: 40vw;
-  height: 5vw;
-  max-height: 80px;
-  max-width: 750px;
-  position: relative;
-  padding: 0 var(--SpacingA0);
-  transition: all 0.5s linear allow-discrete;
+    /* Colour */
+    background-color: var(--Main-Background-Colour);
 
-      background-size: cover;
-  background-position: center;
-
-  /* background: red;
-  background-image: url('Assets/Backgrounds/Hexagon.jpg'); */
-  background-image: 
-    linear-gradient(to right, rgba(0,0,0,1), rgba(139,139,139,0.7)), 
-    url('Assets/Backgrounds/Hexagon.jpg');
-
-    background-size: cover;
-  background-position: center;
-
-
-
-  /* Background-image: linear-gradient(90deg, #121212, #8b8b8b), url('Assets/Backgrounds/Hexagon.jpg'); */
-}
-
-.GithubButton:hover
-{
-  -webkit-box-shadow:0px 0px 126px 14px #d1bedf;
-  -moz-box-shadow: 0px 0px 126px 14px #d1bedf;
-  box-shadow: 0px 0px 126px 14px #d1bedf;
-
-
-      background-size: cover;
-  background-position: center;
-
-  /* background: red;
-  background-image: url('Assets/Backgrounds/Hexagon.jpg'); */
-  /* Background-image: linear-gradient(90deg, #9770b6, #d1bedf), url('Assets/Backgrounds/Hexagon.jpg'); */
-
-    background-image: 
-    linear-gradient(to right, rgba(151, 112, 182, 1), rgba(209, 190, 223, 0.3)), 
-    url('Assets/Backgrounds/Hexagon.jpg');
-
-    background-size: cover;
-  background-position: center;
-
-}
-
-.GithubButton > img
-{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    opacity: 0.5;
-}
-
-.GithubButton > span
-{
-  position: relative;
-  padding-right: var(--SpacingA10);
-  float: left;
-  margin-left: var(--SpacingA0);
-  z-index: 1;
-  font-size: 2vw;
-}
-
-
-/* Media Formatting */
-.MediaCenter {}
-
-/* Tablets: */
-@media only screen and (max-width: 1280px) {
-
-  .NavLine {
-    visibility: hidden;
-    overflow: hidden;
-    min-width: 0px;
-    border: none;
-    flex-basis: 0;
-  }
-
-  nav {
-    width: 0;
-    position: relative;
-    border: none;
-  }
-}
-
-@media only screen and (max-width: 962px) {
-
-  main {
-    align-items: center;
-  }
-
-  .MediaCenter {
-    justify-content: center;
-  }
-
-  header {
-    align-items: center;
-  }
-
-  .CVTitle {
+    /* Centring */
+    position: relative; /* Allows for absolute elements to be within main */
+    display: flex;
     flex-direction: column;
-  }
-
-  .CVTitle * {
-    align-items: center;
-  }
-
-  .CVDate {
-    margin-left: 0;
     align-items: center;
 
-  }
+    padding-bottom: var(--Spacing1);
+    margin-bottom: var(--Spacing1);
+    border-radius: var(--Spacing1);
+
+    @media (max-width: 430px)
+    {
+        background-color: var(--Base-Background-Colour);
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
 }
 
-
-
-@media only screen and (max-width: 809px) {
-  .Showcase {
-    width: 340px;
-  }
-
+main > *,
+.MainDupe > *
+{
+    margin: var(--Spacing1) var(--Spacing1) 0 var(--Spacing1);
+}
+ 
+main > *
+{
+    width: calc(100% - calc(var(--Spacing1) * 2));
 }
 
-@media only screen and (max-width: 768px) {
-  #Contact .FlexRow {
-    display: block;
-  }
+header
+{
+    @media (max-width: 430px)
+    {
+        margin-left: var(--Spacing1);
+    }
+}
 
-  header {
+/* Section / header */
+header, section
+{
+    margin-bottom: var(--Spacing1);
+}
+
+/* Footer contains thank you note and copyright information */
+/* Block colour and centring */
+footer
+{
+    /* Centring */
     text-align: center;
-  }
 
-  ul {
-    text-align: left;
-  }
+    /* Spacing */
+    padding: var(--Spacing1);
 
-  .Pannel .FlexRow {
-    justify-content: center;
-  }
+    /* Position */
+    margin-top: auto;
+
+    @media (max-width: 430px)
+    {
+        margin: var(--Spacing2);
+    }
 }
+
+/* LAYOUT */
+
+
+/* Block container holds inline-block elements, automatically adding spacing and overwriting universal *,
+/* assumes elements go from left to right then up to wrap. Does not contain any sizing information so that the priniciple is general */
+.BlockContainer
+{
+    display: block;
+}
+
+.BlockContainer > * /* All Children of block container */
+{
+    display: inline-block;
+    margin: 0 var(--Spacing2) var(--Spacing2) 0px; /* Overwrites Margin from Project-Content > * */
+}
+
+/* Flex Column is a centered display flex container, created as a general layout tool,
+Used to match the general responsive vertical design of my portfolio */
+.FlexColumn
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.FlexRow
+{
+    display: flex;
+    flex-direction: row;
+}
+
+/* BASIC OVERIDES */
+
+
+/* Makes bold text accented */
+strong
+{
+    color: var(--Accent-Colour);
+}
+
+/* Links and Addresses */
+a
+{
+    color: var(--Link-Colour);
+    font-weight: bold;
+}
+
+/* Moves the bullet points past start of text*/
+ul
+{
+    padding-left: 2em;
+}
+
+
+/* Ensure that buttons always have cursor pointer hitboxes, regardless of hover */
+button
+{
+    cursor: pointer;
+}
+
+img 
+{
+    border-radius: 5px;
+}
+
+/* HELPER CLASSES */
+
+
+.OverflowHidden
+{
+    overflow: hidden;
+}
+
+
+
+/* PAGE CONTENTS */
+
+/* Giant Page Header that requires it's own sizing and re-sizing to keep the design consistent */
+.PageTitleText
+{
+    font-size: 4.5em;  
+    
+    @media (max-width: 820px) /* Shrinking past tablet size */
+    {
+        font-size: 2.5em;
+    }
+}
+
+.Project-Card
+{
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: var(--Text-Colour);
+    text-decoration: none;
+    text-align: left;
+    /* font-weight: bold;  - Carry over from a */
+
+    transition: 0.15s ease-in-out;
+
+    /* Switching from horizontal to vertical cards : */
+    /* Aligns text and items ( image and content ) to center */
+    @media (max-width: 728px)
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+/* Hover Effect for card:
+Creates a small shadow around the card to look like it's popping up
+Moves the card upwards with transition
+Rounds the corners for the Card to match the image */
+.Project-Card:hover
+{
+    border-radius: 10px;
+    transform: translateY(calc(var(--Spacing2) * -1));
+    box-shadow: 0 0 14px 8px var(--Box-Shadow-Colour)
+}
+
+
+.Project-Image
+{
+    padding: var(--Spacing1);
+    border-radius: 26px;
+    width: 350px;
+    min-width: 316px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    /* Changes Dimensions to fit the vertical card format */
+    @media (max-width: 728px)
+    {
+        max-width: 400px;
+        width: 80%;
+    }
+}
+
+
+/* Container for the project's general details :
+Centered and padded to line up with image better */
+.Project-Content
+{
+    padding: var(--Spacing1);
+    margin: auto 0;
+}
+
+/* Universal margin for project title and project paragraph, 
+will apply to things implemented in the future too */
+.Project-Content > *
+{
+    margin-bottom: var(--Spacing1);
+}
+
+
+/* General Tag that will scale itself based on padding and span parent width,
+used as another way to highlight buttons and text in addition to project tags */
+.Tag 
+{
+    /* Display */
+    display: inline-block;
+    padding: 8px;
+
+    /* Border */
+    border-style: solid;
+    border-color: var(--Accent-Colour);
+    border-radius: 5px;
+
+    /* Colour */
+    color: white;
+    background-color: var(--Accent-Colour);
+
+    /* Text */
+    font-size: small;
+    font-weight: bold;
+}
+
+
+.Pannel
+{
+    padding: var(--Spacing1) var(--Spacing1) 0 var(--Spacing1);
+
+    @media (max-width: 430px)
+    {
+        padding: 0;
+    }
+}
+
+/* Flex Row Container used to align an Image to text,
+Useful for Icon Titles */
+.PannelTitle
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: var(--Spacing1);
+}
+
+/* Image for Title, will remove itself in tablet view in place for banner,
+Sets the image to the same height as a h2 + h3 */
+.PannelTitle > img
+{
+    border-radius: 5px;
+    height: 4rem;
+    margin-right: var(--Spacing1);
+    aspect-ratio: 1 / 1;
+
+    /* Turns itself off when the image gets too small (smaller devices) */
+    @media (max-width: 728px)
+    {
+        display: none;
+    }
+}
+
+/* Invisible banner that becomes visible in tablet view, 
+replaces pannel title image */
+.PannelBanner
+{
+    display: none;
+
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+
+    @media (max-width: 728px)
+    {
+        display: block;
+    }
+}
+
+.SourceLink
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: var(--Spacing2) var(--Spacing1);
+    background-color: var(--Base-Background-Colour);
+    
+    color: var(--Text-Colour);
+    font-weight: bold;
+
+    border-color: var(--Base-Background-Colour);
+    border-style: solid;
+    border-radius: 5px;
+
+    
+
+    margin-top: var(--Spacing2);
+
+    transition: box-shadow 0.15s ease-in-out;
+    box-shadow: 0px 0px 0px 0px var(--Accent-Colour);
+}
+
+.SourceLink:hover
+{
+    border-color: var(--Accent-Colour);
+    transition: border-color 0.15s ease-in-out;
+
+    transition: box-shadow 0.15s ease-in-out;
+    box-shadow: 0 4px 4px 4px var(--Box-Shadow-Colour);
+}
+
+.SourceLink:active
+{
+    color: white;
+    svg path
+    {
+        fill: white;
+    }
+
+    background-color: var(--Accent-Colour);
+    border-color: var(--Accent-Colour);
+
+    outline: 2px solid var(--Accent-Colour);
+    outline-offset: 3px; 
+}
+
+.SourceLink svg 
+{
+    width: 20px;
+    height: 20px;
+}
+
+.SourceLink svg path 
+{
+    fill: var(--Text-Colour);
+}
+
+
+/* .ImageReel > img
+{
+    width: 200px;
+    aspect-ratio: 1/1;
+} */
+
+.ImageReel
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: var(--Spacing2);
+
+
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+
+    /* grid-template-rows: 100px 100px 100px;
+    grid-auto-rows: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px; */
+
+    @media (max-width: 728px)
+    {
+        display: none;
+    }
+}
+
+.ImageReel img
+{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+
+.Carousel
+{
+    /* Dimensions */
+    /* width: 316px; */
+    height: 80%;
+    min-height: 284px;
+    max-height: 340px;
+    aspect-ratio: 1/1;
+    
+    /* Position */
+    margin: auto auto var(--Spacing2) auto; /* Centers Carousel */
+    position: relative;
+    align-items: center;
+
+    /* Display : */
+    display: none;
+    overflow: hidden;
+
+    /* Turns carousel on at tablet size : */
+    /* Display flex allows for margin-bottom on Dots */
+    @media (max-width: 728px)
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* @media (max-width: 430px)
+    {
+        width: 316px;
+    } */
+}
+
+.CarouselImageSlider
+{
+    /* DImensions */
+    height: 90%;
+    width: 100%;
+
+    border-radius: 5px;
+
+    /* Centering Content : */
+    display: inline-flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    
+    overflow: hidden; /* Allows for Lightbox Viable Classes to Scale */
+}
+
+/* Absolute position images overlapped over each other */
+.CarouselImage
+{
+    height: 100%;
+    position: absolute;
+
+    z-index: 0;
+    opacity: 0; /* Opacity 0 for stacked images and fade */
+    transition: opacity 0.6s ease;
+}
+
+/* Fades Active image in and de-activated image out to give the fade transition effect : */
+.CarouselImage.Active
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.Dots 
+{
+    margin-top: auto;
+}
+
+.Dot
+{
+    /* Display : */
+    display: inline-block;
+    background-color: var(--Text-Colour);
+    margin: 0 6px;
+
+    /* Dimensions */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circle Shape */
+
+    /* Effects */
+    cursor: pointer;
+    transition: All 0.6s ease;
+}
+
+/* Highlights the Dot by changing it's colour and adding a shadow : */
+/* Transition all from .Dot makes the transition smooth : */
+.Dot.Active
+{
+    background-color: var(--Accent-Colour);
+    box-shadow: 0 4px 4px 4px var(--Box-Shadow-Colour);
+}
+
+.SocialMediaButtonsContainer
+{
+    gap: var(--Spacing2);
+    justify-content: center;
+    margin-bottom: var(--Spacing1);
+
+    @media (max-width: 430px)
+    {
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+}
+
 
 form
 {
-  /* Dimensions */
-  width:340px;
-  min-height:440px;
+    /* Dimensions */
+    width:340px;
 
-  /* Display */
-  display: flex;
-  flex-direction: column;
-  position:relative;
+    /* min-height:440px; */
 
-  /* Styling */
-  background-color: var(--SurfaceOppositeA0);
-  font-family:'Montserrat',sans-serif;
-  border-color: var(--SurfaceA20);
-  border-style: solid;
-  border-radius: 8px;
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    position:relative;
 
-  /* Spacing */
-  padding: var(--SpacingA0) var(--SpacingA10);
-  margin-bottom: var(--SpacingA0);
+    /* Styling */
+    text-align: center;
+    background-color: var(--Base-Background-Colour);
+    font-family:'Montserrat',sans-serif;
 
-  /* Filters */
-  box-shadow:0 0 40px -10px #000;
+    border-color: var(--Main-Background-Colour);
+    border-style: solid;
+    border-radius: var(--Spacing2);
+
+    /* Spacing */
+    padding: var(--Spacing1) var(--Spacing2);
+    margin: var(--Spacing1)  auto var(--Spacing1) auto;
+
+    @media (max-width: 430px)
+    {
+        width: 316px;
+        border: none;
+        margin: 0 0 var(--Spacing1) 0;
+    }
 }
 
 form > h2
 {
-  width:180px;
+    width:180px;
 
-  color:#78788c;
+    color: var(--Text-Colour);
 
-  border-bottom: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #78788c;
+    border-bottom: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--Text-Colour);
 
-  margin-top: var(--SpacingA20);
-  padding-bottom:10px;
+    margin-top: var(--Spacing1);
+    padding-bottom:10px;
 }
 
 form > p:before
 {
-  content:attr(type);
-  display:block;
-  margin:28px 0 0;
-  font-size:14px;
-  color:#5a5a5a;
+    content:attr(type);
+    display:block;
+    margin:28px 0 0;
+    font-size:14px;
+    color:var(--Text-Colour);
 }
 
 form > p
 {
-  text-align: left;
+    text-align: left;
 }
 
 form > button
-{ 
-  padding:8px 12px;
-  margin:8px 0px 20px auto;
-  font-family:'Montserrat',sans-serif;
-  border:2px solid #78788c;
-  background:0;color:#5a5a6e;
-  cursor:pointer;
-  transition:all .3s;
-}
-
-form > button:hover
-{
-background:#78788c;color:#fff
+{   
+    width: fit-content;
+    margin:8px 0px calc(var(--Spacing1) + 5px + 1rem) auto;
 }
 
 input,
 textarea
 {
-  resize: none;
-  field-sizing: content;
-  width:100%;
-  padding:10px;
-  box-sizing:border-box;
-  background:none;
-  outline:none;
-  border:0;
-  font-family:'Montserrat',sans-serif;
-  transition:all .3s;
-  border-bottom:2px solid #bebed2;
-}
-
-
-
-/* Debug */
-.DEBUG-TempContainer
-{
-  background-color: black;
+    resize: none;
+    field-sizing: content;
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    background:none;
+    outline:none;
+    border:0;
+    font-family:'Montserrat',sans-serif;
+    transition:all .3s;
+    border-bottom:2px solid var(--Main-Background-Colour);
+    color: var(--Accent-Colour);
+        font-size: 1rem;
 }
 
 .Number
 {
-  position:absolute;
-  bottom:-15px;
-  right:-40px;
-  background:#50505a;
-  color:#fff;
-  padding:16px 4px 16px 0;
-  border-radius:6px;
-  font-size:13px;
-  box-shadow:10px 10px 40px -14px #000;
+    width: max-content;
+
+    position:absolute;
+    bottom:-15px;
+
+    background:var(--Accent-Colour);
+
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    text-align: start;
+
+    padding:16px 4px 16px 0;
+    border-radius:6px;
+    font-size:13px;
+    box-shadow: 0 4px 4px 4px var(--Box-Shadow-Colour);
+
+    display: inline-flex;
+
+    /* Turns itself off when the image gets too small (smaller devices) */
+    @media (max-width: 430px)
+    {
+        /* display: flex; */
+        flex-direction: column;
+        bottom: -24px;
+    }
+  
+
 }
 
 .Number > span
@@ -833,39 +819,139 @@ textarea
   margin:0 5px 0 15px;
 }
 
-
-/* Effects */
-
-
-.LegibleText
+.BackButton,
+.BackButtonBuffer
 {
-  font-family: Consolas;
-  line-height: 1;
+    @media (max-width: 728px)
+    {
+        display: none;
+    }
 }
 
-.FlexRow img 
+.BackButton
 {
-  flex-shrink: 0;  /* prevents it from shrinking */
-  flex-grow: 0;    /* prevents it from growing */
+    /* Position */
+    margin: 0 auto 0 0;
+    position: absolute;
+    left: var(--Spacing1);
+    top: var(--Spacing1);
+        
+    /* Sizing */
+    max-width: 48px;
+    width: 15%;
+    min-width: 2rem;
+}
+
+.BackButton svg
+{
+    width: 100%;
+
+    path 
+    {
+        fill: var(--Text-Colour);
+    }
+}
+
+.BackButtonBuffer
+{
+    margin-top: calc(48px + var(--Spacing1));
+}
+
+.DarkModeButton
+{
+    position: absolute;
+    right: var(--Spacing1);
+    cursor: pointer;
+
+    @media (max-width: 728px)
+    {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        width: max-content;
+    }
 }
 
 
+/* UNIQUE CONTENT : */
 
-.TNail
+/* Used on the a tag of the CV Button so that the cv button doesn't take up the full width of main,
+Basically a sizing override from main since otherwise the link is always clickable */
+#CVButtonWrapper
 {
-  max-width: 358px;
-  max-height: 350px;
-  width: 90%;
-  margin-bottom: var(--SpacingA10);
+    max-width: 80px;
+    width: 20%;
+    min-width: 4rem;
+
+    margin: var(--Spacing1) 0;
 }
 
-.mainIndent
+/* Actual CV Button, makes sure it matches wrapper size, and has a transition filter over it.
+Image is pure white so that the transition from black to white is copy perfect */
+#CVButton
 {
-  margin: 0 var(--SpacingA0);
+    width: 100%;
+
+    /* BLACK FILTER : */
+    filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(0%) hue-rotate(201deg) brightness(95%) contrast(100%);
+
+    transition: 0.15s ease-in-out;
 }
 
-.ViewImage
+.dark #CVButton
 {
-  width: 80%;
+    filter: none;
 }
+
+/* Blue accent filter on hover : */
+#CVButton:hover
+{
+    filter: brightness(0) saturate(100%) invert(58%) sepia(16%) saturate(6873%) hue-rotate(208deg) brightness(91%) contrast(91%);
+}
+
+/* LightBox */
+#Lightbox
+{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#Lightbox.Active 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Lightbox img 
+{
+    /* min-width: 40%;
+    min-height: 40%; */
+    max-width: 90%;
+    max-height: 90%;
+    padding: 4px;
+    background-color: #1a1a1a;
+    border: 2px solid white;
+}
+
+.LightboxViable
+{
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.LightboxViable:hover,
+.ScaleOnHover:hover
+{
+    transform: scale(1.24,1.24);
+}
+
+
+/* DEBUG */
 
